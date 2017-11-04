@@ -1,0 +1,442 @@
+{
+   "add_domain_button": {
+      "description": "",
+      "message": "Додај домен"
+   },
+   "badger_status_allow": {
+      "description": "",
+      "message": "Дозвољено "
+   },
+   "badger_status_block": {
+      "description": "",
+      "message": "Блокирано "
+   },
+   "badger_status_cookieblock": {
+      "description": "",
+      "message": "Блокирани колачићи са "
+   },
+   "badger_status_noaction": {
+      "description": "",
+      "message": "No tracking for "
+   },
+   "data_settings": {
+      "description": "This is an options page tab heading.",
+      "message": "Управљај подацима"
+   },
+   "ded_always_allow": {
+      "description": "",
+      "message": "Увек дозволи "
+   },
+   "ded_can_allow_to_track": {
+      "description": "",
+      "message": " може дозволити домену да вас прати на вебу."
+   },
+   "ded_logging_into": {
+      "description": "",
+      "message": "Пријава на "
+   },
+   "ded_never_allow": {
+      "description": "",
+      "message": "Увек блокирај захтеве трећих страна од "
+   },
+   "ded_on": {
+      "description": "",
+      "message": " на "
+   },
+   "ded_only_allow": {
+      "description": "",
+      "message": "Дозволи само "
+   },
+   "ded_privacy_badger_alert": {
+      "description": "",
+      "message": "Privacy Badger упозорење!"
+   },
+   "description": {
+      "description": "",
+      "message": "Privacy Badger вас штити од праћења док прегледате веб!"
+   },
+   "disabled_for_these_domains": {
+      "description": "",
+      "message": "Privacy Badger је онемогућен за домене излистане испод. Можете додати домен преко Privacy Badger иконице на траци адресе или укуцавањем домена (не адресе) у пољу и кликом на дугме \"Додај домен\"."
+   },
+   "dnt_tooltip": {
+      "description": "",
+      "message": "This domain promises to not track you"
+   },
+   "domain_slider_allow_tooltip": {
+      "description": "Tooltip shown when you hover over the rightmost part of a slider shown for each domain in the domain list.",
+      "message": "Click here to allow this domain"
+   },
+   "domain_slider_block_tooltip": {
+      "description": "Tooltip shown when you hover over the leftmost part of a slider shown for each domain in the domain list.",
+      "message": "Click here to block this domain entirely"
+   },
+   "domain_slider_cookieblock_tooltip": {
+      "description": "Tooltip shown when you hover over the center part of a slider shown for each domain in the domain list.",
+      "message": "Click here to block this domain from setting cookies"
+   },
+   "donate_to_eff": {
+      "description": "",
+      "message": "Донирајте EFF"
+   },
+   "download": {
+      "description": "",
+      "message": "Преузми"
+   },
+   "error_input": {
+      "description": "",
+      "message": "Шта није у реду?"
+   },
+   "export_user_data": {
+      "description": "",
+      "message": "Извези корисничке податке"
+   },
+   "feed_the_badger_title": {
+      "description": "",
+      "message": "клик за повратак контроле над овим трагачем у Privacy Badger"
+   },
+   "firstRun_title": {
+      "description": "",
+      "message": "Хвала што сте инсталирали Privacy Badger!"
+   },
+   "first_run_text": {
+      "description": "",
+      "message": "Научите како да Privacy Badger заштити вашу приватност."
+   },
+   "import": {
+      "description": "",
+      "message": "Увези"
+   },
+   "import_select_file": {
+      "description": "",
+      "message": "Изаберите датотеку за увоз."
+   },
+   "import_successful": {
+      "description": "",
+      "message": "Листа трагача и подешавања су успешно ажурирана!"
+   },
+   "import_user_data": {
+      "description": "",
+      "message": "Увези корисничке податке"
+   },
+   "intro1": {
+      "description": "firstRun.html intro to Privacy Badger",
+      "message": "Privacy Badger блокира шпијунске рекламе и невидљиве трагаче.  Ту је да спречи праћење вашег прегледања веба без вашег пристанка."
+   },
+   "intro2": {
+      "description": "",
+      "message": "Ово проширење је направљено да аутоматски заштити вашу приватност од трагача трећих страна које се неприметно учитавају док прегледате веб. Шаљемо заглавље \"Не прати\" на сваки захтев и наше проширење     процењује вероватноћу да ли сте још увек праћени. Ако алгоритми процене да је вероватноћа сувише велика, ми аутоматски блокирамо слање вашег захтева домену. Имајте у виду да је Privacy Badger још увек бета и да одлука алгоритма да вас домен прати није коначна ."
+   },
+   "intro_3_states": {
+      "description": "",
+      "message": "Наше проширење има три стања. "
+   },
+   "intro_by_eff": {
+      "description": "",
+      "message": "Пројекат Electronic Frontier Foundation"
+   },
+   "intro_cookie_blocked": {
+      "description": "",
+      "message": "значи да се верује да је домен трагач али и да је неопходан за функционисање странице, тако да га Privacy Badger дозвољава али блокира његове колачиће."
+   },
+   "intro_green": {
+      "description": "",
+      "message": "Зелено"
+   },
+   "intro_has_blocked": {
+      "description": "",
+      "message": " значи да Privacy Badger верује да је овај домен трагач и блокира га. "
+   },
+   "intro_hungry": {
+      "description": "",
+      "message": "Ништа не може зауставити Privacy Badger да једе колачиће када је гладан!"
+   },
+   "intro_no_tracker": {
+      "description": "",
+      "message": "значи да Privacy Badger верује да ово није трагач. Можете кликнути на Privacy Badger иконицу на траци алата вашег прегледача ако желите да прегазите подешавања аутоматског блокирања. Или можете прегледати веб у миру док Privacy Badger проналази и једе трагаче један за другим."
+   },
+   "intro_red": {
+      "description": "",
+      "message": "Црвено"
+   },
+   "intro_social_share": {
+      "description": "",
+      "message": "Нека свет зна да имате став против праћења на мрежи"
+   },
+   "intro_text": {
+      "description": "",
+      "message": "Сада вас је заштитио Privacy Badger. Да бисте научили како Privacy Badger ради, кликните испод за брзо упутство."
+   },
+   "intro_yellow": {
+      "description": "",
+      "message": "Жуто"
+   },
+   "invalid_json": {
+      "description": "",
+      "message": "Неважећа JSON датотека."
+   },
+   "name": {
+      "description": "",
+      "message": "Privacy Badger"
+   },
+   "non_tracker": {
+      "description": "",
+      "message": "Домени испод вас не прате"
+   },
+   "non_tracker_tip": {
+      "description": "",
+      "message": "Тренутно Privacy Badger проверава само да ли треће стране користе колачиће, HTML5 локално складиште, или метод canvas fingerprinting за праћење вашег прегледања. Неки од ових домена могу користити методе праћења које Privacy Badger не може открити."
+   },
+   "options_dnt_policy_learn_more": {
+      "description": "",
+      "message": "Learn more"
+   },
+   "options_dnt_policy_setting": {
+      "description": "",
+      "message": "Check if sites comply with EFF's Do Not Track policy"
+   },
+   "options_domain_list_tab": {
+      "description": "This is an options page tab heading.",
+      "message": "Tracking Domains"
+   },
+   "options_domain_search": {
+      "description": "",
+      "message": "Претражи домене"
+   },
+   "options_general_settings": {
+      "description": "This is an options page tab heading.",
+      "message": "Општа подешавања"
+   },
+   "options_loading": {
+      "description": "",
+      "message": "Учитавање..."
+   },
+   "options_pb_has_detected": {
+      "description": "",
+      "message": "Privacy Badger је открио"
+   },
+   "options_potential": {
+      "description": "",
+      "message": "потенцијалних"
+   },
+   "options_remove_origin_confirm": {
+      "description": "",
+      "message": "Да ли сте сигурни да желите да уклоните ово порекло из Privacy Badger?"
+   },
+   "options_slider_text": {
+      "description": "",
+      "message": "Privacy Badger вас штити на вебу! Ови клизачи вам омогућавају да контролишете како Privacy Badger рукује са сваким трагачем који је откривен док прегледате."
+   },
+   "options_so_far": {
+      "description": "",
+      "message": "до сада. Ови клизачи вам омогућују да контролишете како Privacy Badger рукује са сваким трагачем."
+   },
+   "options_social_widgets_checkbox": {
+      "description": "",
+      "message": "Замени виџете друштвених мрежа"
+   },
+   "options_title": {
+      "description": "",
+      "message": "Privacy Badger - Опције"
+   },
+   "options_tracking_domains": {
+      "description": "",
+      "message": "домена трагача"
+   },
+   "options_webrtc_setting": {
+      "description": "",
+      "message": "Спречи WebRTC да пропусти локалну IP адресу *"
+   },
+   "options_webrtc_warning": {
+      "description": "",
+      "message": "* WebRTC може пропустити вашу локалну IP адресу. Подразумевано подешавање Privacy Badger проширења помаже у заштити али за додатно заштиту можете омогућити ову опцију. Напомињемо да то може погоршати перформансе неких алата као што је Google Hangouts."
+   },
+   "pb_detected": {
+      "description": "",
+      "message": "Privacy Badger је откривен"
+   },
+   "popup_blocked": {
+      "description": "",
+      "message": "Нема трагача трећих страна на овом сајту."
+   },
+   "popup_disable_for_site": {
+      "description": "",
+      "message": "Онемогући Privacy Badger на овом сајту"
+   },
+   "popup_enable_for_site": {
+      "description": "",
+      "message": "Омогући Privacy Badger на овом сајту"
+   },
+   "popup_help_button": {
+      "description": "Tooltip that comes up when you hover over the question mark button in the upper right corner of the popup.",
+      "message": "Help"
+   },
+   "popup_instructions": {
+      "description": "",
+      "message": "могући \u003Ca target='_blank' href='https://www.eff.org/privacybadger#faq-What-is-a-third-party-tracker?'>пратиоци\u003C/a> на овом сајту. Ови клизачи вам омогућују да контролишете како да Privacy Badger рукује сваким од њих. Не би требало да их подешавате осим ако нешто није покварено."
+   },
+   "popup_noblocked": {
+      "description": "",
+      "message": "Зашто ништа није блокирано?"
+   },
+   "popup_options_button": {
+      "description": "",
+      "message": "Опције"
+   },
+   "privacy_badger_what_is": {
+      "description": "",
+      "message": "Шта је Privacy Badger?"
+   },
+   "remove_button": {
+      "description": "This is the label for the 'Remove selected' buttons.",
+      "message": "Уклони одабрано"
+   },
+   "report_broken_site": {
+      "description": "",
+      "message": "Да ли је Privacy Badger покварио овај сајт? Обавестите нас!"
+   },
+   "report_button": {
+      "description": "",
+      "message": "Пријави грешку"
+   },
+   "report_cancel": {
+      "description": "",
+      "message": "Откажи"
+   },
+   "report_close": {
+      "description": "",
+      "message": "Затвори"
+   },
+   "report_fail": {
+      "description": "",
+      "message": "Упс. Нешто је кренуло како не треба."
+   },
+   "report_input_label": {
+      "description": "",
+      "message": "Опис"
+   },
+   "report_success": {
+      "description": "",
+      "message": "Хвала! Пажљиво ћемо проучити проблем."
+   },
+   "report_terms": {
+      "description": "",
+      "message": "Ово ће аутоматски послати следеће информације на EFF: сајт који тренутно прегледате, верзија прегледача, верзија Privacy Badger проширења и стање свих клизача за сајт."
+   },
+   "report_text": {
+      "description": "",
+      "message": "Укратко опишите проблем испод."
+   },
+   "report_title": {
+      "description": "",
+      "message": "Пријава грешака"
+   },
+   "share_button_title_facebook": {
+      "description": "Tooltips that come up when you hover over the social sharing buttons on the introductory slideshow page.",
+      "message": "Share on Facebook"
+   },
+   "share_button_title_google": {
+      "description": "Tooltips that come up when you hover over the social sharing buttons on the introductory slideshow page.",
+      "message": "Share on Google Plus"
+   },
+   "share_button_title_twitter": {
+      "description": "Tooltips that come up when you hover over the social sharing buttons on the introductory slideshow page.",
+      "message": "Share on Twitter"
+   },
+   "show_counter_checkbox": {
+      "description": "",
+      "message": "Прикажи број блокираних ставки"
+   },
+   "slideshow_1": {
+      "description": "",
+      "message": " Здраво, ја сам Privacy Badger! Хвала што сте ме инсталирали. Овде сам да бих вам дао неке корисне савете, тако да можемо радити заједно."
+   },
+   "slideshow_10": {
+      "description": "",
+      "message": " Ако мислите да сам направио погрешну одлуку за трагача, можете померити клизач на црвено за блокирање, жуто за делимично блокирање или зелено за дозвољавање."
+   },
+   "slideshow_11": {
+      "description": "",
+      "message": " Ако промените моје подешавање, увек га можете вратити под моју контролу кликом на стрелицу за опозив."
+   },
+   "slideshow_12": {
+      "description": "",
+      "message": " Ако имате проблем са страницом и мислите да је то моја грешка, можете кликнути на дугме за онемогућавање. Заспаћу и ништа нећу блокирати на том веб сајту."
+   },
+   "slideshow_13": {
+      "description": "",
+      "message": " Ако покварим страницу, обаветите моје програмере тако да могу решити проблем! Можете то урадити кликом на ово дугме."
+   },
+   "slideshow_14": {
+      "description": "",
+      "message": " Ако желите да промените друга подешавања, кликните на овај зупчаник."
+   },
+   "slideshow_15": {
+      "description": "",
+      "message": " Наравно, можете оставити сва ова подешавања и ја ћу наставити тихо да једем све трагаче које откријем."
+   },
+   "slideshow_16": {
+      "description": "",
+      "message": " Хвала што сте направили важан алп лак корак ка заштити ваше приватности! Можете кликнути овде ако вам је опет потребна помоћ, а можете кликнути испод да свет сазна да имате став против птаћења на мрежи."
+   },
+   "slideshow_2": {
+      "description": "",
+      "message": " Остаћу у вашем прегледачу и вребаћу шпијунске рекламе и трагаче који снимају све што радите на мрежи."
+   },
+   "slideshow_3": {
+      "description": "",
+      "message": " Ако откријем нешто што се понаша као трагач, зауставићу га и блокираћу.  "
+   },
+   "slideshow_4": {
+      "description": "",
+      "message": " Ако кликнете на моју иконицу можете видети списак могућих трагача на тренутној картици."
+   },
+   "slideshow_5": {
+      "description": "",
+      "message": " Ако је клизач црвен, то значи да сам потпуно блокирао трагача!  Тај ђаво ти више неће сметати."
+   },
+   "slideshow_6": {
+      "description": "",
+      "message": " Ако је клизач жут, то значи да сам делимично блокирао трагача. Урадићу све што могу да га спречим да вас прати једући његове колачиће, али његово потпуно блокирање може покварити страницу."
+   },
+   "slideshow_7": {
+      "description": "",
+      "message": " Ако је трагач зелен то значи да не могу рећи да ли вас домен прати. Можда не, али ћу још увек држати око на њега."
+   },
+   "slideshow_8": {
+      "description": "",
+      "message": " Први пут када кликнете на моју иконицу, можете видети да су сви трагачи зелени — не брините! Ја сам другачији од осталих блокатора трача — уместо познавања списка ствари које треба блокирати одмах, учим шта да блокирам док прегледате веб. Ако још ништа нисам блокирао, прегледајте око 4-5 различитих веб сајтова. Требало би да почнем са блокирањем уобичајених трагача након тога."
+   },
+   "slideshow_9": {
+      "description": "",
+      "message": " Учим у покрету, тако да што ме дуже користите, боље ћу вас штитити од скривених трагача!"
+   },
+   "tooltip_allow": {
+      "description": "",
+      "message": "Померите клизач удесно за дозвољавање домена"
+   },
+   "tooltip_block": {
+      "description": "",
+      "message": "Померите клизач улево за блокирање домена"
+   },
+   "tooltip_cookieblock": {
+      "description": "",
+      "message": "Центрирајте клизач за блокирање колачића"
+   },
+   "version": {
+      "description": "",
+      "message": "version"
+   },
+   "what_is_a_tracker": {
+      "description": "Tooltip that comes up when you hover over the 'tracking domains' link under the Tracking Domains tab on the options page.",
+      "message": "What is a tracker?"
+   },
+   "whitelist_form_domain_input_placeholder": {
+      "description": "Placeholder text for the Add domain input under the Whitelisted Domains tab on the options page.",
+      "message": "e.g. www.domain.com, *.domain.net, domain.org"
+   },
+   "whitelisted_domains": {
+      "description": "This is an options page tab heading.",
+      "message": "Дозвољени домени"
+   }
+}

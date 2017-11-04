@@ -1,0 +1,319 @@
+/*
+Ratings Preview for YouTube
+Copyright (C) 2011-2017 Cristian Perez <http://www.cpr.name>
+All rights reserved.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL CRISTIAN PEREZ BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+
+/* IMPORTANT: This file is tokenized, the following tokens surrounded with [] can be replaced to override the default style: */
+/* YTRP_LIKE_COLOR_TOKEN */
+/* YTRP_SEPARATOR_COLOR_TOKEN */
+/* YTRP_DISLIKE_COLOR_TOKEN */
+/* YTRP_HIGHLIGHT_COLOR_TOKEN */
+/* YTRP_NORATING_COLOR_TOKEN */
+/* YTRP_BAR_THICKNESS_TOKEN */
+/* YTRP_BAR_OPACITY_TOKEN */
+/* YTRP_PLAYBACK_PROGRESS_BAR_TOKEN */
+
+/* ytrp stands for YouTube Ratings Preview /*
+/* rb stands for rating bar */
+/* bg stands for background */
+/* fg stands for foreground */
+/* hl stands for highlight */
+
+/*//////////////////// OWN STYLES ////////////////////*/
+
+.ytrp_wrapper
+{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 3;
+	opacity: 0;
+    opacity: [YTRP_BAR_OPACITY_TOKEN];
+	transition: opacity 0.2s;
+	-webkit-transition: opacity 0.2s;
+}
+
+.ytrp_wrapper.no_transition
+{
+	transition: none;
+	-webkit-transition: none;
+}
+
+.ytrp_wrapper:hover
+{
+	opacity: 1;
+}
+
+.ytrp_rb_bg
+{
+	position: absolute;
+	background: #CCC;
+    background: [YTRP_SEPARATOR_COLOR_TOKEN];
+	z-index: 3;
+}
+
+.ytrp_rb_fg
+{
+	position: absolute;
+}
+
+.ytrp_rb_bg_bottom
+{
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 4px;
+    height: [YTRP_BAR_THICKNESS_TOKEN]px;
+	border-top: 1px solid #FFF;
+}
+
+.ytrp_rb_bg_top
+{
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 4px;
+	height: [YTRP_BAR_THICKNESS_TOKEN]px;
+	border-bottom: 1px solid #FFF;
+}
+
+.ytrp_rb_bg_left
+{
+	left: 0;
+	top: 4px;
+    top: [YTRP_BAR_THICKNESS_TOKEN]px;
+	bottom: 4px;
+    bottom: [YTRP_BAR_THICKNESS_TOKEN]px;
+	width: 4px;
+    width: [YTRP_BAR_THICKNESS_TOKEN]px;
+	border-right: 1px solid #FFF;
+}
+
+.ytrp_rb_bg_right
+{
+	right: 0;
+	top: 4px;
+    top: [YTRP_BAR_THICKNESS_TOKEN]px;
+	bottom: 4px;
+    bottom: [YTRP_BAR_THICKNESS_TOKEN]px;
+	width: 4px;
+    width: [YTRP_BAR_THICKNESS_TOKEN]px;
+	border-left: 1px solid #FFF;
+}
+
+.ytrp_rb_fg_like
+{
+	bottom: 0;
+	left: 0;
+	height: 4px;
+    height: [YTRP_BAR_THICKNESS_TOKEN]px;
+	background: #2793e6;
+    background: [YTRP_LIKE_COLOR_TOKEN];
+}
+
+.ytrp_rb_fg_dislike
+{
+	bottom: 0;
+	right: 0;
+	height: 4px;
+	height: [YTRP_BAR_THICKNESS_TOKEN]px;
+	background: #CCC;
+    background: [YTRP_DISLIKE_COLOR_TOKEN];
+	border-left: 1px solid #CCC;
+    border-left: 1px solid [YTRP_SEPARATOR_COLOR_TOKEN];
+}
+
+.ytrp_rb_fg_norating
+{
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 4px;
+	height: [YTRP_BAR_THICKNESS_TOKEN]px;
+	background: #CCC;
+    background: [YTRP_NORATING_COLOR_TOKEN];
+}
+
+.ytrp_rb_fg_hl
+{
+	background: #cc181e;
+    background: [YTRP_HIGHLIGHT_COLOR_TOKEN];
+}
+
+.ytrp_rb_fg_hl_bottom
+{
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 4px;
+	height: [YTRP_BAR_THICKNESS_TOKEN]px;
+}
+
+.ytrp_rb_fg_hl_top
+{
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 4px;
+	height: [YTRP_BAR_THICKNESS_TOKEN]px;
+}
+
+.ytrp_rb_fg_hl_left
+{
+	left: 0;
+	top: 0;
+	bottom: 0;
+	width: 4px;
+	width: [YTRP_BAR_THICKNESS_TOKEN]px;
+}
+
+.ytrp_rb_fg_hl_right
+{
+	right: 0;
+	top: 0;
+	bottom: 0;
+	width: 4px;
+	width: [YTRP_BAR_THICKNESS_TOKEN]px;
+}
+
+.ytrp_tooltip
+{
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	height: 25%;
+	z-index: 3;
+}
+
+/*//////////////////// OVERRIDEN STYLES ////////////////////*/
+
+.video-extras-sparkbars, .video-extras-sparkbar-likes, .video-extras-sparkbar-dislikes
+{
+	height: 4px !important;
+    height: [YTRP_BAR_THICKNESS_TOKEN]px !important;
+}
+
+.video-extras-sparkbar-likes
+{
+	background: #2793e6 !important;
+    background: [YTRP_LIKE_COLOR_TOKEN] !important;
+	margin-left: -1px !important; /* Should be made 0 if dislikes are 0 */
+    border-right: 1px solid #CCC !important;
+    border-right: 1px solid [YTRP_SEPARATOR_COLOR_TOKEN] !important; /* Should be made 0 if dislikes are 0 */
+}
+
+.video-extras-sparkbar-dislikes
+{
+	background: #CCC !important;
+	background: [YTRP_DISLIKE_COLOR_TOKEN] !important;
+}
+
+#sentiment /* For new YouTube material design */
+{
+	height: 4px !important;
+    height: [YTRP_BAR_THICKNESS_TOKEN]px !important;
+    padding: 0 !important;
+    background: #CCC !important;
+	background: [YTRP_DISLIKE_COLOR_TOKEN] !important;
+}
+
+.ytd-sentiment-bar-renderer /* For new YouTube material design */
+{
+    background-color: transparent !important;
+}
+
+#like-bar /* For new YouTube material design */
+{
+	height: 4px !important;
+    height: [YTRP_BAR_THICKNESS_TOKEN]px !important;
+	background: #2793e6 !important;
+    background: [YTRP_LIKE_COLOR_TOKEN] !important;
+    margin-left: -1px !important; 
+    border-right: 1px solid #CCC !important;
+    border-right: 1px solid [YTRP_SEPARATOR_COLOR_TOKEN] !important; /* Should be made 0 if dislikes are 0 */
+}
+
+.watch-view-count
+{
+	white-space: nowrap !important;
+    width: auto !important;
+    right: 0 !important;
+}
+
+.video-time, .video-actions, .vdur, .ytp-videowall-still-info-duration,
+ytd-thumbnail-overlay-time-status-renderer /* For new YouTube material design */
+{
+	bottom: 6px !important;
+    bottom: calc([YTRP_BAR_THICKNESS_TOKEN]px + 2px) !important;
+    margin-bottom: 0px !important;
+}
+
+.video-time, .addto-button, .yt-uix-button, .vdur, .ytp-button,
+ytd-thumbnail-overlay-time-status-renderer, ytd-thumbnail-overlay-toggle-button-renderer /* For new YouTube material design */
+{
+	z-index: 4 !important;
+}
+
+.playlist-data-section, .videowall-still-takeover
+{
+	z-index: 3 !important;
+}
+
+#masthead-expanded-lists-container
+{
+	padding-bottom: 1px !important;
+}
+
+.resume-playback-background, .resume-playback-progress-bar,
+ytd-thumbnail-overlay-resume-playback-renderer /* For new YouTube material design */
+{
+    [YTRP_PLAYBACK_PROGRESS_BAR_TOKEN];
+}
+
+/* For Chrome: prevents bars to be 1px thinner in some thumbnails. Values calculated by trial-error. */
+
+.yt-thumb-72
+{
+    height: 40.250px; /* should override 40.500px */
+}
+
+.yt-thumb-100
+{
+	height: 56px; /* should override 56.250px */
+}
+
+.yt-thumb-106
+{
+	height: 59.125px; /* should override 59.625px */
+}
+
+.yt-thumb-120
+{
+	height: 67.250px; /* should override 67.500px */
+}
+
+.yt-thumb-170
+{
+	height: 69.250px; /* should override 69.750px */
+}
+
+.yt-thumb-196
+{
+	height: 110px; /* should override 110.250px */
+}
+
+.yt-thumb-224
+{
+	height: 67.250px; /* Special case, should override 67.500 */
+}
+
+ .yt-thumb-370
+{
+	height: 226px; /* should override 226.125px */
+}

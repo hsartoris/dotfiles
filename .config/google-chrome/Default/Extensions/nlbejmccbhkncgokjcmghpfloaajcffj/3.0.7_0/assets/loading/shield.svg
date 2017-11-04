@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="159px" height="183px" viewBox="0 0 159 183" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.1 (39012) - http://www.bohemiancoding.com/sketch -->
+    <title>Shield</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Splash-Screen" transform="translate(-297.000000, -416.000000)" fill="#2FA6F8">
+            <g id="HSS-Logo" transform="translate(228.000000, 416.000000)">
+                <g id="logo" transform="translate(69.000000, 0.000000)">
+                    <g id="Shield">
+                        <path d="M78.3951637,182.514726 C77.6131968,182.225248 0,157.211135 0,68.2183125 L0,3.18677399 C0,1.62041784 1.27020012,0.347505624 2.83611871,0.347505624 L155.938896,0.347505624 C157.504815,0.347505624 158.775015,1.62041784 158.775015,3.18677399 L158.775015,68.2183125 C158.775015,157.211135 81.1618184,182.219299 80.3798514,182.514726 C80.0623014,182.63369 79.7268892,182.697137 79.3875076,182.697137 C79.048126,182.697137 78.7127138,182.63369 78.3951637,182.514726" id="Fill-1"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

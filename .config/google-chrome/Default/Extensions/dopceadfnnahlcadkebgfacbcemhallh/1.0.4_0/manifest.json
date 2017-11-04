@@ -1,0 +1,21 @@
+{
+   "browser_action": {
+      "default_icon": "icon_128.png",
+      "default_popup": "popup.html",
+      "default_title": "Magnet Collector"
+   },
+   "content_scripts": [ {
+      "js": [ "content.js" ],
+      "matches": [ "\u003Call_urls>" ]
+   } ],
+   "description": "Find magnet and torrent links in a page much easier and safer.",
+   "icons": {
+      "128": "icon_128.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA82PQ2/bUVZcMOdNzx58P22thZN97WTo9rChS6oHbuThBO0QSGXWxLqukU+dwa7Akuu4yGTr88mOiMWnOshlYvzLtf/iTJ6VOr5UJXeMLdGGqoIOFObUuoAobEoSB6mI69FrKenMz19Me2ZK+Sc593D3QeaCnchMGw43r1qapZNLCkRc9OGLtAV6WgohiA55rmBUW7CT3tOatrModi2WVkKdNUYTwX5wH+2wY3wADToCU29po4I6J/VZwgq1G1OJkwnUkSPCZsKWik/eH5cLn/CiK3CWjYalBqh0CUtuCH5z1iSDp3hhvUDLwB54nKQzNiKm8341M92+Xu5aKCI76owIDAQAB",
+   "manifest_version": 2,
+   "name": "Magnet Collector",
+   "permissions": [ "activeTab" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.4"
+}

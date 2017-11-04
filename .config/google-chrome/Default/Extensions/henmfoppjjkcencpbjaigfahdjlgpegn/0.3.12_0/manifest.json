@@ -1,0 +1,21 @@
+{
+   "chrome_url_overrides": {
+      "newtab": "main.html"
+   },
+   "content_security_policy": "script-src 'self' https://ssl.google-analytics.com https://query.yahooapis.com https://suggestqueries.google.com https://www.gstatic.com https://drscdn.500px.org https://ppcdn.500px.org  https://*.vo.msecnd.net https://*.staticflickr.com 'unsafe-eval'; object-src 'self'",
+   "default_locale": "en",
+   "description": "__MSG_extDescription__",
+   "icons": {
+      "128": "logo-128.png",
+      "16": "logo-16.png",
+      "48": "logo-48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvlYKZ1LNSN00HKOWfHeYm9yEAjqw+USOJsiu16lsUc3zmRrbXkyQyys30lNKSLAVtc5Njhoct8K0pKPPLZEiL8aBXu7IPRVnlKiahfkwJD3/BSTEYsHoVVRbWzN3WhiSq8b4phQBlkCxOcht1QvhJzgJCU/ONT3FR02dOqIjOa/3QO1Jl2u0ClFN5ZuxU7V1eeiBdFikPfdSaZaKFk/yd9wsflAfTKoF9uUV7QjjN83wTVS9o3MQ1s+PWRHD/UmGOQUH5wVty4CT7Xi3qqLMi0UJSodZ/usLl6YV3Ppq7OIxvbsU+waBO4ckags8TusbCbe7hNPkTPLdT23cfCaAIQIDAQAB",
+   "manifest_version": 2,
+   "name": "__MSG_extName__",
+   "offline_enabled": true,
+   "optional_permissions": [ "http://aqicn.org/*", "https://www.gstatic.com/prettyearth/*", "https://*.500px.org/*", "https://*.vo.msecnd.net/*", "https://*.bing.com/*" ],
+   "permissions": [ "geolocation", "unlimitedStorage", "alarms", "topSites", "chrome://favicon/" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.3.12"
+}

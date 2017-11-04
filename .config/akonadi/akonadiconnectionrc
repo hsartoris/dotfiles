@@ -1,0 +1,6 @@
+[DBUS]
+Address="unix:abstract=/tmp/dbus-y167cNfVKS,guid=2b301b852c1024ee1b1b889b59fa002a"
+
+[Data]
+Method=UnixPath
+UnixPath=/tmp/akonadi-hsartoris.S1c13Z/akonadiserver.socket

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>New Tab</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" href="build/app.min.css">
+</head>
+<body>
+
+<div id="background"></div>
+
+<div id="widgets">
+    <div id="top-left"></div>
+    <div id="top-right" class="right"></div>
+    <div id="content" class="container">
+        <div id="center-above"></div>
+        <div id="center" class="row"></div>
+        <div id="center-below" class="row"></div>
+    </div>
+    <div id="bottom" class="col-lg-6 center-block"></div>
+    <div id="bottom-right" class="right"></div>
+    <div id="bottom-left"></div>
+</div>
+<div id="right-sidebar"></div>
+
+<script id="message-template" type="text/x-handlebars-template">
+    <h4>{{title}}</h4>
+
+    <p>
+        <span class="message">{{message}}</span>
+    </p>
+    <a href="" class="hide"><span>✕</span></a>
+</script>
+
+<script id="permission-template" type="text/x-handlebars-template">
+    <div class="modal-content">
+        <div class="modal-body">
+            <button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            {{{message}}}
+        </div>
+        <div class="modal-footer">
+            {{{footer}}}
+            <span id="okay-btn" class="btn btn-info btn-xs">Okay</span>
+        </div>
+    </div>
+</script>
+
+<script id="search-template" type="text/x-handlebars-template">
+    <div class="message">
+        <h1 class="slogan">Dream Afar</h1>
+
+        <h3 class="value-prop">A new way to explore the world</h3>
+    </div>
+    <form id="search-form" method="get" action="https://www.google.com/search">
+        <div class="col-lg-5">
+            <div class="form-group">
+                <span class="search-icon">
+                    <i class="glyphicon glyphicon-search"></i>
+                </span>
+                <input class="typeahead" name="q" type="text" placeholder="Search Google">
+                <input type="submit" style="position: absolute; left: -9999px; width: 1px; height: 1px;"/>
+            </div>
+        </div>
+    </form>
+</script>
+
+<script id="topsites-template" type="text/x-handlebars-template">
+    <ul>
+        {{#each topSites}}
+        <li>
+            <a href="{{url}}"><span class="topsite-favicon"><img src="chrome://favicon/{{url}}"/></span>
+                <span class="topsite-title">{{title}}</span></a>
+        </li>
+
+        {{/each}}
+    </ul>
+</script>
+
+<script id="weather-template" type="text/x-handlebars-template">
+    <div class="metric-stat" title="Double click to change unit.">
+        <span id="icon" data-icon="{{code}}" title="{{condition}}"></span>{{temperature}}&deg;<span
+            class="unit {{unitClass}}">{{unit}}</span>
+    </div>
+    <span class="location metric-label data">{{location}}</span>
+
+    <div id="weather-detail">
+        <div class="row">
+            <div class="col-md-3">
+                <span class="col-md-8">
+                    <div class="weather-icon" id="weather-today-code" data-icon="{{code}}"></div>
+                    <div id="weather-today-condition">{{condition}}</div>
+                </span>
+                <span class="col-md-4" id="weather-today-temperature">{{temperature}}&deg;</span>
+            </div>
+
+            <div class="col-md-9">
+                <ul>
+                    {{#each forecast}}
+                    <li>
+                        <h2>{{day}}</h2>
+
+                        <h2>{{date}}</h2>
+                        <span class="weather-icon" data-icon="{{code}}" title="{{text}}"> </span> <span class="high-temp">{{high}}&deg;</span> <span class="temp-separator">|</span> <span class="low-temp">{{low}}&deg;</span>
+                    </li>
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+        <div class="row" style="padding: 5px 15px;">
+            <div id="sunmoon" class="col-md-5 weather-detail-block">
+                <h3>Sun Position</h3>
+
+                <div id="sun-times">
+                    <div id="sun-path">
+                        <div id="sun-animation"></div>
+                    </div>
+                    <div id="sun-symbol-path"><span id="symbol">☀</span></div>
+                </div>
+                <div id="sun-legend">
+                    {{#if astronomy}}
+                    {{#with astronomy}}
+                    <div id="sunrise">{{sunrise}}</div>
+                    <div id="sunset">{{sunset}}</div>
+                    {{/with}}
+                    {{/if}}
+                </div>
+                <div class="clear">&nbsp;</div>
+            </div>
+            <div id="weather-misc" class="col-md-3 weather-detail-block">
+                <h3>More Detail</h3>
+                {{#with detail}}
+                <div>Visibility: <span>{{visibility}}</span></div>
+                <div>Humidity: <span>{{humidity}}</span></div>
+                <div>Pressure: <span>{{pressure}}</span></div>
+                <div>Wind: <span>{{wind}}</span></div>
+                {{/with}}
+            </div>
+            {{#if hasAqi}}
+            <div id="weather-aqi" class="col-md-3 weather-detail-block">
+                <h3>Air Quality</h3>
+
+                <div id="air-quality">
+                    {{#if aqiPermission}}
+                    {{#if aqi}}
+                    <div>{{aqi}}</div>
+                    <div style="color:{{aqiColor}}; font-size: 13px; font-weight: 500;">{{aqiCategory}}</div>
+                    {{else}}
+                    <h2> Loading... <i class="fa fa-refresh fa-spin"></i></h2>
+                    {{/if}}
+                    {{else}}
+                    <span id="aqi-permission-btn" class="btn btn-info btn-xs">Get Data from AQICN</span>
+                    {{/if}}
+                </div>
+            </div>
+            {{/if}}
+
+        </div>
+    </div>
+
+</script>
+
+<script id="background-template" type="text/x-handlebars-template">
+    <li style="background-image: url('backgrounds/{{filename}}')"></li>
+</script>
+
+<script id="background-info-template" type="text/x-handlebars-template">
+    <div class="background-config">
+        <i class="fa fa-cog"></i>
+    </div>
+    <div>
+        <div class="info">
+            <a href="{{infoUrl}}">From <b>{{source}}</b></a>
+            <a class="photoUrl" href="{{photoUrl}}" style="vertical-align: middle;" download="{{title}}.jpg"><i class="glyphicon glyphicon-download"></i></a>
+            {{#each socialBtns}}
+                <a target="_blank" class="social-share" data-site="{{site}}" href="{{href}}"><i class="fa {{icon}}"></i></a>
+            {{/each}}
+        </div>
+        <div class="info">
+            <span class="title">{{title}}</span>
+            <span class="source">
+                <a href="{{infoUrl}}" target="_blank" class="control source-url">By <b>{{author}}</b></a>
+            </span>
+        </div>
+    </div>
+</script>
+
+<script id="centerclock-template" type="text/x-handlebars-template">
+    <h1 class="time" title="Double click to change format.">{{time}}</h1>
+    <span class="format">AM</span>
+</script>
+
+<script id="topmenu-template" type="text/x-handlebars-template">
+    <ul class="nav navbar-nav navbar-right">
+        <li>
+            <a class="chrome-link" data-url="chrome://history" data-action="Chrome History" id="historyLink" href="">History</a>
+        </li>
+        <li>
+            <a class="chrome-link" data-url="chrome://bookmarks" data-action="Chrome Bookmarks" id="bookmarkLink"
+               href="">Bookmarks</a>
+        </li>
+        <li>
+            <a class="chrome-link" data-url="chrome://apps" data-action="Chrome Apps" id="appsLink" href="">Apps</a>
+        </li>
+        <li>
+            <a id="top-nav-menu" class="active chrome-link">
+                <span class="burger-line bread top"></span>
+                <span class="burger-line meat"></span>
+                <span class="burger-line bread bottom"></span>
+            </a>
+        </li>
+    </ul>
+</script>
+
+<script id="sidebar-template" type="text/x-handlebars-template">
+    <ol>
+        <li class="settings-link" data-widget-id="background"><i class="fa fa-search"></i><a id="backgroundLabel" href="">Background</a></li>
+        <li class="settings-link" data-widget-id="search"><i class="fa fa-search"></i><a id="searchBarLabel" href="">Search
+            Bar</a></li>
+        <!--<li class="settings-link"><i class="fa fa-list-alt"></i><a href="">Top Menus</a></li>-->
+        <li class="settings-link" data-widget-id="topsites"><i class="fa fa-caret-square-o-right"></i><a
+                id="mostVisitedLabel" href="">Most Visited</a></li>
+        <li class="settings-link" data-widget-id="weather"><i class="fa fa-sun-o"></i><a id="weatherLabel" href="">Weather</a>
+        </li>
+    </ol>
+
+    <footer>
+        <ul class="social-links"></ul>
+        <div class="site-info">
+            <h5 class="site-info-detail">Dream Afar</h5>
+            <h6 class="site-info-detail">A new way to explore the world</h6>
+        </div>
+    </footer>
+    <div id="sidebar-settings"></div>
+</script>
+
+<script id="settings-detail-template" type="text/x-handlebars-template">
+    <div class="settings-detail" data-setting-id="{{setting-id}}">
+        <div class="setting-detail-title row">
+            <h3 class="col-xs-6">{{title}}</h3>
+
+            {{#if main-switch}}
+            <div class="element col-xs-3">
+                <input type="checkbox" name="widget-switch" class="lightswitch" checked>​
+                <label class="checkbox-value-label"></label>
+            </div>
+            {{/if}}
+        </div>
+        {{#each settings}}
+        <section class="setting-item">
+            <div class="setting-item-info">
+                <h5 class="setting-item-title">{{setting-title}}</h5>
+                <h6 class="setting-item-desc">{{setting-desc}}</h6>
+            </div>
+            <div class="setting-item-actions">
+                {{#each inputs}}
+                <div class="input-block">
+                    <input type="{{type}}" class="{{class}}" {{#if value}} value="{{value}}" {{/if}} {{variables}} name="{{name}}"/>
+                    {{#if label}}
+                    <label>{{#if icon}}<i class="fa {{icon}}"></i> {{/if}}{{label}}</label>
+                    {{/if}}
+                    <label class="checkbox-value-label"></label>
+                </div>
+                {{/each}}
+            </div>
+        </section>
+        {{/each}}
+    </div>
+</script>
+
+<script src="build/app.min.js"></script>
+<img id="image"/>
+</body>
+</html>

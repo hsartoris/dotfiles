@@ -1,0 +1,22 @@
+{
+   "content_scripts": [ {
+      "css": [ "styles.css", "tipped.css" ],
+      "js": [ "jquery-1.9.1.js", "jquery-highlight1.js", "spinners.min.js", "tipped.js", "names.js", "script.js" ],
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_end"
+   } ],
+   "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+   "description": "Expose the influence of money in Congress by downloading the new browser extension. Join the fight to end political corruption.",
+   "icons": {
+      "128": "icon128.png",
+      "16": "icon16.png",
+      "48": "icon48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA3BTL8VTsX+erq8Wd9zQBJk11Vo34WaDBYTCIgFPvahFGIjWpcdtcJaKQ+Ndr5xRDiIlKS6tpxKhISiYxIeRPbuGKNXKnW2d+LaMj08nLjHjY5TcESFXVbIde+VNRj8jYJ55brwsMO89L5DuWMHWKVnFiK3rK70QMlMtU4ugNcY4Fnd/7Ya8eTvEGtjSZ3anazEO2tTXfPxtABAzLvqrGUKJtqEyOfE2Zs6wuDWqrgEAwFIeUEzkgPYlYiAHCV69Ha/jo2QnbAoNxHS7w0u5UkawGi780A0IDhAW9lg6DY0lhtzwe1KA5t2YolwplY1m3s4P6QrDBS60LP1fRSL6eWQIDAQAB",
+   "manifest_version": 2,
+   "name": "Greenhouse",
+   "permissions": [ "http://opensecrets.org/*" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "3.1",
+   "web_accessible_resources": [ "Helvetica.otf", "Raleway-ExtraBold.ttf", "Raleway-Regular.ttf", "Raleway-Bold.ttf", "NotoSans-Bold.ttf", "HelveticaNeue-Bold.otf", "HelveticaNeue-Light.otf" ]
+}

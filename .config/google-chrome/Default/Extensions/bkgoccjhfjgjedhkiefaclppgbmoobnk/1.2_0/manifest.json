@@ -1,0 +1,20 @@
+{
+   "app": {
+      "launch": {
+         "height": 900,
+         "web_url": "http://www.audiotool.com/app/chrome",
+         "width": 1280
+      }
+   },
+   "description": "Produce music online with builtin synthesizers, drum machines, effects and samples.",
+   "icons": {
+      "128": "icon_128.png",
+      "16": "icon_16.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDlSt7FgWLwlo92pKBQ8OtrwUrUgEW2JffIkMjYyER3BYyWekNH/8IAJLqAW9hFDyIyf3hd4RhceSHgwLQPPScrvFalto6YF3run3QKlW5T1tNGoCj7gtZBfDBKTpkVyyU67lpJw0gCXZfUO4Zsct5gqC8LBeasCGoBMmO86lDuewIDAQAB",
+   "manifest_version": 2,
+   "name": "Audiotool",
+   "short_name": "Audiotool",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.2"
+}

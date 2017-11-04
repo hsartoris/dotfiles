@@ -1,0 +1,139 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Ratings Preview for YouTube™ settings</title>
+<link rel="icon" type="image/png" href="favicon16.png" />
+<link rel="stylesheet" href="tokenized_style.css" type="text/css" />
+<style type="text/css">
+.opacity_on_hover
+{
+	opacity: 0.8;
+	transition: opacity 0.1s ease-out;
+	-webkit-transition: opacity 0.1s ease-out;
+    -moz-transition: opacity 0.1s ease-out;
+}
+.opacity_on_hover:hover
+{
+	opacity: 1.0;
+}
+
+input[type="range"] /* To override Firefox's too big default margins */
+{
+    margin-left: 2px;
+    margin-right: 2px;
+}
+</style>
+<script src="popup.js"></script>
+</head>
+
+<body style="width:372px; margin: -8px auto 0 auto; text-align:center; background-color:white; overflow:hidden;">
+	
+	<div style="display:inline-block; position:relative; width:348px; padding: 0px 8px; text-align:left; overflow:hidden;">
+		
+		<div id="changes_notice" style="position:absolute; top:56px; left:0; right:0; padding-right:8px; font-family:Arial,sans-serif; font-size:12px; color:darkorange; text-align:right; visibility:hidden;"><strong>REFRESH YOUTUBE PAGE TO APPLY CHANGES</strong></div>
+		
+		<div style="height:48px; font-family:Arial,sans-serif; font-size:16px;">
+			<img id="logo" src="icon48.png" alt="icon" style="width:48px; height:48px; margin-right:8px; float:left; cursor:pointer;" />
+			<p style="padding-top:15px; white-space:nowrap;">Ratings Preview for YouTube™ settings</p>
+		</div>
+		
+		<hr />
+		
+		<div style="font-family:Arial,sans-serif; font-size:13px;">
+			
+			<div style="height:33px; padding-top:6px;">
+				
+				Bar style:&nbsp;&nbsp;
+				<select id="select_style">
+				<option value="0">Classic</option>
+				<option value="1" selected="selected">Modern</option>
+				</select>
+				&nbsp;&nbsp;<span style="position:relative; left:10px; color:gray;">Preview:</span>
+				
+				<div style="position:relative; left:221px; bottom:15px; height:8px; width:120px;"><div class="ytrp_wrapper no_transition"><div class="ytrp_rb_bg ytrp_rb_bg_bottom" style="position:absolute; bottom:0px; width:120px;"><div class="ytrp_rb_fg ytrp_rb_fg_like" style="width: 112px;"></div><div class="ytrp_rb_fg ytrp_rb_fg_dislike" style="width: 7px;"></div></div><div class="ytrp_tooltip" style="height: 100%;" title="93.8% likes (597 ratings)&#10;RP score: 8"></div></div></div>
+
+				<div style="position:relative; left:293px; bottom:38px; width:46px; height:19px; z-index:2;"><img class="ytrp_demo_timenode" src="timenode.png" width="46px" height="14px" /></div>
+				
+				<span id="demo_thumbnail" style="display:inline-block; position:relative; top:-25px; left:276px; width:65px; height:37px; background-image:url('thumbnail.jpg'); opacity:0.0;"><div class="ytrp_wrapper no_transition"><div class="ytrp_rb_bg ytrp_rb_bg_bottom"><div class="ytrp_rb_fg ytrp_rb_fg_hl ytrp_rb_fg_hl_bottom"></div></div><div class="ytrp_rb_bg ytrp_rb_bg_top"><div class="ytrp_rb_fg ytrp_rb_fg_hl ytrp_rb_fg_hl_top"></div></div><div class="ytrp_rb_bg ytrp_rb_bg_left"><div class="ytrp_rb_fg ytrp_rb_fg_hl ytrp_rb_fg_hl_left"></div></div><div class="ytrp_rb_bg ytrp_rb_bg_right"><div class="ytrp_rb_fg ytrp_rb_fg_hl ytrp_rb_fg_hl_right"></div></div><div class="ytrp_tooltip" title="93.8% likes (597 ratings)&#10;RP score: 8"></div></div></span>
+
+				<div id="demo_thumbnail_timenode" style="position:relative; left:293px; bottom:52px; width:46px; height:19px; z-index:2; opacity:0.0;"><img class="ytrp_demo_timenode" src="timenode.png" width="46px" height="14px" /></div>
+				
+			</div>
+			
+			<div style="height:33px;">
+			Bar thickness:&nbsp;&nbsp;
+			<input id="range_thickness" type="range" min="3" max="7" value="4" step="1" style="position:relative; top:4px; height:15px; width:100px;" />
+			&nbsp;&nbsp;<label id="label_thickness">4 pixels</label>
+			</div>
+			
+			<div style="height:54px;">
+			Highlighted videos:&nbsp;&nbsp;
+			<input id="range_highlighted" type="range" min="0" max="8" value="0" step="1" style="position:relative; top:4px; height:15px; width:100px;" />
+			&nbsp;&nbsp;<label id="label_highlighted">Disabled</label>
+			<br />
+			<span style="position:relative; top:5px; color:gray;" title="Highlighted videos will always be less than half of the total">Best videos in every page will show a box around them</span>
+			</div>
+
+			<div style="height:30px;">
+            <label><input id="checkbox_showrpscore" type="checkbox" style="position:relative; left:-3px; top:2px;" />Show RP score for every video (from 0 to 10)</label>
+			</div>
+			
+			<div style="height:54px;">
+			Bar opacity:&nbsp;&nbsp;
+			<input id="range_opacity" type="range" min="0" max="8" value="8" step="1" style="position:relative; top:4px; height:15px; width:100px;" />
+			&nbsp;&nbsp;<label id="label_opacity">Opaque</label>
+			<br />
+			<span style="position:relative; top:5px; color:gray;">Move the mouse over thumbnails to see at 100% opacity</span>
+			</div>
+			
+			<div style="height:54px;">
+			Cache expiration:&nbsp;&nbsp;
+			<input id="range_caching" type="range" min="0" max="7" value="3" step="1" style="position:relative; top:4px; height:15px; width:100px;" />
+			&nbsp;&nbsp;<label id="label_caching">1 hour</label>
+			<br />
+			<span style="position:relative; top:5px; color:gray;" title="The cache is always deleted when you close the browser">Cached bars load faster but display outdated data</span>
+			</div>
+
+            <div style="height:53px;">
+                Playback progress bar position:&nbsp;&nbsp;
+                <select id="select_playbackprogressbar">
+                    <option value="0" selected="selected">Top</option>
+                    <option value="1">Bottom/Hidden</option>
+                </select>
+                <br />
+                <span style="position:relative; top:5px; color:gray;">Bottom only shown if Bar opacity is set to Invisible</span>
+            </div>
+			
+		</div>
+		
+	</div>
+
+	<!-- Google Play and App Store badges -->
+	<div style="padding:8px 0 4px 0; text-align:center; overflow:hidden; background-color:#eee; border-top:1px solid #ccc; border-bottom:1px solid #bbb;">
+	<a title="Available for Android phone or tablet" href="https://play.google.com/store/apps/details?id=com.ratingspreview" target="_blank"><img class="opacity_on_hover" src="logoandroid172.png" alt="Android app on Google Play" width="129px" height="45px" style="margin-right:8px;" /></a>
+	<a title="Donate to the developer of Ratings Preview" href="http://ratingspreview.com/donate.html" target="_blank"><img class="opacity_on_hover" src="logodonate172.png" alt="Donate" width="129px" height="45px" style="margin-left:8px;" /></a>
+	</div>
+
+	<!-- Social networks -->
+	<div style="padding:8px 8px 4px 8px; text-align:left; overflow:hidden; background-color:#fcc">
+	<span style="display:block; padding-bottom:12px; font-family:Arial,sans-serif; font-size:13.5px; color:#cc181e"><strong>❤ Do you like the extension and would like me to continue supporting it? Please share it now!</strong></span>
+    <!-- Facebook like Facebook page -->
+    <iframe width="84px" height="20px" style="width:84px !important; height:20px !important; border:none; overflow:hidden;" allowTransparency="true" src="http://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fratingspreview&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=21&amp;locale=en_US&amp;appId=1404750919793418" scrolling="no" frameborder="0"></iframe>
+    <!-- Share on Facebook -->
+    <a title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://www.facebook.com/ratingspreview" target="_blank"><img class="opacity_on_hover" src="sharefacebook20.png" alt="Share on Facebook" height="20px" style="margin-left:5px; margin-right:10px;" /></a>
+    <!-- Share on Twitter -->
+    <a title="Share on Twitter" href="https://twitter.com/intent/tweet?source=webclient&text=Pretty%20cool%20extension%20for%20YouTube!%20http://ratingspreview.com" target="_blank"><img class="opacity_on_hover" src="sharetwitter20.png" alt="Share on Twitter" height="20px" /></a>
+    </div>
+
+</body>
+
+</html>
+
+<!--
+Ratings Preview for YouTube
+Copyright (C) 2011-2017 Cristian Perez <http://www.cpr.name>
+All rights reserved.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL CRISTIAN PEREZ BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->

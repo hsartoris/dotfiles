@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+  <head>
+		<link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="popup.js"></script>
+  </head>
+  <body>
+		<span class="rtiy__blacklist" title="Disable the extension for all pages of this domain." id="blacklist_button"><u>Disable Domain</u></span>
+		<span class="rtiy__blacklist" title="Re-enable the extension for all pages of this domain." id="whitelist_button"><u>Enable Extension</u></span>
+		<span class="rtiy__blacklist" title="Disable the extension temporarily for this page only." id="blackonce_button"><u>Disable Once</u></span>
+		<form name="settings" id="rtiy__settings">
+		<hr><span title="Word Density affects how many words on the page will be translated. 'High' is as many as possible."><b>Word Density</b><br>
+		<input type="radio" name="density" value="low">Low<input type="radio" name="density" value="medium">Medium<input type="radio" name="density" value="high">High<br></span>
+		<span title="Word Difficulty affects which sets of Russian words will be used."><b>Word Difficulty</b><br>
+		<input type="radio" name="difficulty" value="easy">Beginner<input type="radio" name="difficulty" value="intermediate">Intermediate<input type="radio" name="difficulty" value="hard">All Words<br></span>
+		</form>
+		<hr>
+		<table class="rtiy__dictionary" id="rtiy__dictionary"></table>
+  </body>
+</html>
+

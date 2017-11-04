@@ -1,0 +1,37 @@
+{
+   "background": {
+      "persistent": true,
+      "scripts": [ "background/background.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "19": "assets/icons/status/unavailable.png",
+         "38": "assets/icons/status/unavailable@2x.png"
+      },
+      "default_popup": "panel/panel.html",
+      "default_title": "__MSG_name__"
+   },
+   "content_scripts": [ {
+      "css": [ "insertion/insertion.css" ],
+      "js": [ "insertion/insertion.js" ],
+      "matches": [ "*://*/*" ]
+   } ],
+   "content_security_policy": "script-src 'self' http://localhost:8081; object-src 'self'",
+   "default_locale": "en",
+   "description": "__MSG_description__",
+   "icons": {
+      "128": "assets/icons/logo/128.png",
+      "16": "assets/icons/logo/16.png",
+      "256": "assets/icons/logo/256.png",
+      "48": "assets/icons/logo/48.png",
+      "512": "assets/icons/logo/512.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAk3qdb9cgNUl1A0HADebjKbF+CUtkj52lB4PCVB5SkRxrIjGRxUyoYYO4YOcvJm2xXDZsH8x1cvHxcg84l9GiFIKXqMoETuoDxbOU0FBJFbGYysPHPTw/156oYYfP6Kvu31jmQ81ecxQW4cxpuzhYDzcBsyc5fQh9Si26okQQXGvWCr0j7+CZ06u04FPId7eSOp1fxT0Jn8sGzD9Ig8ZwCrkOZKRKrOwKTkMYVydBOjy8KWLl4cZk+mq031x+x7eFX5iBBv9mvNQrP0JAmIxyYawuF00hlx37Tidvy3gwPXMCJA+6rb3skIMW8vutkutooCCvsU6JKLS9XbexK6KhpwIDAQAB",
+   "manifest_version": 2,
+   "name": "__MSG_name__",
+   "permissions": [ "\u003Call_urls>", "tabs", "storage", "proxy", "webRequest", "webRequestBlocking", "activeTab", "alarms", "declarativeContent", "gcm", "idle", "identity", "management", "nativeMessaging", "notifications", "pageCapture", "power", "sessions", "tabCapture", "webNavigation", "topSites", "contextMenus", "cookies", "unlimitedStorage", "chrome://favicon/", "chrome://favicon/*", "http://*/*", "https://*/*", "background" ],
+   "short_name": "__MSG_shortName__",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "3.0.7",
+   "web_accessible_resources": [ "assets/insertion/*", "assets/fonts/*" ]
+}

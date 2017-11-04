@@ -1,0 +1,182 @@
+{
+   "500pxLabel": {
+      "description": "Label of 500px setting in sidebar",
+      "message": "500px"
+   },
+   "appsLabel": {
+      "description": "Label of apps link in top menu",
+      "message": "Apps"
+   },
+   "backgroundLabel": {
+      "description": "Label of background setting in sidebar",
+      "message": "Background"
+   },
+   "baiduLabel": {
+      "description": "Label of baidu setting in sidebar",
+      "message": "Baidu"
+   },
+   "bingLabel": {
+      "description": "Label of bing setting in sidebar",
+      "message": "Bing"
+   },
+   "bookmarkLabel": {
+      "description": "Label of bookmark link in top menu",
+      "message": "Bookmarks"
+   },
+   "celsiusLabel": {
+      "description": "Label of celsius option in sidebar",
+      "message": "°C"
+   },
+   "displayOptionDescription": {
+      "description": "Description of display option setting in sidebar",
+      "message": "Hover means only show it when mouse hover on it."
+   },
+   "displayOptionLabel": {
+      "description": "Label of display option setting in sidebar",
+      "message": "Display Options"
+   },
+   "dreamafarLabel": {
+      "description": "Label of dream afar setting in sidebar",
+      "message": "Dream Afar"
+   },
+   "extDescription": {
+      "description": "Extension Description",
+      "message": "An unexpected trip everyday by simply opening a new tab"
+   },
+   "extName": {
+      "description": "Extension Name",
+      "message": "Dream Afar New Tab"
+   },
+   "fahrenheitLabel": {
+      "description": "Label of fahrenheit option in sidebar",
+      "message": "°F"
+   },
+   "flickrLabel": {
+      "description": "Label of flickr setting in sidebar",
+      "message": "Flickr"
+   },
+   "googleArtLabel": {
+      "description": "Label of google art setting in sidebar",
+      "message": "Google Art"
+   },
+   "googleEarthLabel": {
+      "description": "Label of google earth setting in sidebar",
+      "message": "Google Earth"
+   },
+   "googleLabel": {
+      "description": "Label of google setting in sidebar",
+      "message": "Google"
+   },
+   "hideLabel": {
+      "description": "Label of hide setting in sidebar",
+      "message": "hide"
+   },
+   "historyLabel": {
+      "description": "Label of history link in top menu",
+      "message": "History"
+   },
+   "hoverLabel": {
+      "description": "Label of hover setting in sidebar",
+      "message": "hover"
+   },
+   "imageIntervalDescription": {
+      "description": "Description of image changing interval setting in sidebar",
+      "message": "Please choose the update interval of background image"
+   },
+   "imageIntervalLabel": {
+      "description": "Label of image changing interval setting in sidebar",
+      "message": "Update Interval"
+   },
+   "imageSourceDescription": {
+      "description": "Description of image source setting in sidebar",
+      "message": "Please choose image source of background"
+   },
+   "imageSourceLabel": {
+      "description": "Label of image source setting in sidebar",
+      "message": "Image Source"
+   },
+   "locationDescription": {
+      "description": "Description of location setting in sidebar",
+      "message": "Please input your city name"
+   },
+   "locationLabel": {
+      "description": "Label of location setting in sidebar",
+      "message": "Location"
+   },
+   "loopLabel": {
+      "description": "Label of background source play mode option in sidebar",
+      "message": "Loop"
+   },
+   "mostVisitedLabel": {
+      "description": "Label of most visited setting in sidebar",
+      "message": "Most Visited"
+   },
+   "noIntervalLabel": {
+      "description": "Label of background image changing interval option in sidebar",
+      "message": "No Interval"
+   },
+   "oneDayLabel": {
+      "description": "Label of background image changing interval option in sidebar",
+      "message": "One Day"
+   },
+   "oneHourLabel": {
+      "description": "Label of background image changing interval option in sidebar",
+      "message": "One Hour"
+   },
+   "oneMinuteLabel": {
+      "description": "Label of background image changing interval option in sidebar",
+      "message": "One Minute"
+   },
+   "opacityDescription": {
+      "description": "Description of opacity setting in sidebar",
+      "message": "Slide the bar to set opacity"
+   },
+   "opacityLabel": {
+      "description": "Label of opacity setting in sidebar",
+      "message": "Opacity"
+   },
+   "randomLabel": {
+      "description": "Label of background source play mode option in sidebar",
+      "message": "Random"
+   },
+   "searchBarLabel": {
+      "description": "Label of search bar setting in sidebar",
+      "message": "Search Bar"
+   },
+   "searchEngineDescription": {
+      "description": "Description of search engine setting in sidebar",
+      "message": "Please choose the default search engine"
+   },
+   "searchEngineLabel": {
+      "description": "Label of search engine setting in sidebar",
+      "message": "Search Engine"
+   },
+   "showLabel": {
+      "description": "Label of show setting in sidebar",
+      "message": "show"
+   },
+   "sourcePlayModeDescription": {
+      "description": "Description of background source play mode setting in sidebar",
+      "message": "Please choose the sequence of image source displaying"
+   },
+   "sourcePlayModeLabel": {
+      "description": "Label of background source play mode setting in sidebar",
+      "message": "Sequence"
+   },
+   "unsplashLabel": {
+      "description": "Label of unsplash setting in sidebar",
+      "message": "Unsplash"
+   },
+   "weatherLabel": {
+      "description": "Label of weather setting in sidebar",
+      "message": "Weather"
+   },
+   "weatherUnitDescription": {
+      "description": "Description of weather unit setting in sidebar",
+      "message": "Please choose the unit of temperature"
+   },
+   "weatherUnitLabel": {
+      "description": "Label of weather unit setting in sidebar",
+      "message": "Unit"
+   }
+}

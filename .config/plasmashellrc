@@ -1,0 +1,8 @@
+[PlasmaViews][Panel 2][Horizontal1280]
+thickness=36
+
+[ScreenConnectors]
+0=default
+
+[Updates]
+performed=/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/obsolete_kickoffrc.js

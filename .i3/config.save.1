@@ -1,0 +1,322 @@
+# Author: Bram de Haan (http://atelierbramdehaan.nl)
+#
+# You can use these variables anywhere in the i3 configuration file.
+
+set $base00 #19171c
+set $base01 #26232a
+set $base02 #585260
+set $base03 #655f6d
+set $base04 #7e7887
+set $base05 #8b8792
+set $base06 #e2dfe7
+set $base07 #efecf4
+set $base08 #be4678
+set $base09 #aa573c
+set $base0A #a06e3b
+set $base0B #2a9292
+set $base0C #398bc6
+set $base0D #576ddb
+set $base0E #955ae7
+set $base0F #bf40bf
+
+
+exec `xrdb ~/.Xresources`
+
+
+# colors
+#set_from_resource $border       i3wm.color0 $base00
+#set_from_resource $background   i3wm.color0 $base00
+#set_from_resource $text         i3wm.color7 $base07
+#set_from_resource $active       i3wm.color4 $base05
+#set_from_resource $inactive     i3wm.color7 $base07
+
+# Basic color configuration using the Base16 variables for windows and borders.
+# Property Name         Border  BG      Text    Indicator
+client.focused          $base0D $base0D $base07 $base0D $base0D
+client.focused_inactive $base0B $base0B $base07 $base04
+client.unfocused        $base01 $base00 $base07 $inactive
+client.urgent           $base0F $base0F $base07 $active
+client.placeholder      $border $background $base07 $active
+client.background       $border
+
+set $bar-height  40
+set $border-width 2
+
+#for_window [class="^.*"] floating enable
+
+# font for window titles and bar
+font pango:DejaVu Sans Mono 8
+
+# use win key
+set $mod Mod4
+set $mod2 Mod1
+
+# use these keys for focus, movement, and resize directions
+set $left   j
+set $down   k
+set $up     l
+set $right  semicolon
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+# control focused window when follows the mouse movements
+focus_follows_mouse no
+
+# start a terminal
+bindsym $mod+Return exec urxvt
+
+
+# kill focused window
+bindsym $mod+Shift+q kill
+
+# start a program launcher
+bindsym $mod+space exec --no-startup-id `rofi -show run`
+
+# change focus
+bindsym $mod+$left  focus left
+bindsym $mod+$down  focus down
+bindsym $mod+$up    focus up
+bindsym $mod+$right focus right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Left   focus left
+bindsym $mod+Down   focus down
+bindsym $mod+Up     focus up
+bindsym $mod+Right  focus right
+
+# move focused window
+bindsym $mod+Shift+$left    move left
+bindsym $mod+Shift+$down    move down
+bindsym $mod+Shift+$up      move up
+bindsym $mod+Shift+$right   move right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Shift+Left     move left
+bindsym $mod+Shift+Down     move down
+bindsym $mod+Shift+Up       move up
+bindsym $mod+Shift+Right    move right
+
+bindsym $mod+$mod2+$left	exec `~/.local/bin/workspaceShift -1`
+bindsym $mod+$mod2+Left		exec `~/.local/bin/workspaceShift -1`
+bindsym $mod+$mod2+$right	exec `~/.local/bin/workspaceShift 1`
+bindsym $mod+$mod2+Right	exec `~/.local/bin/workspaceShift 1`
+
+
+# split in horizontal orientation
+bindsym $mod+h split h
+
+# split in vertical orientation
+bindsym $mod+v split v
+
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen toggle
+
+# change container layout
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# focus the parent container
+bindsym $mod+a focus parent
+
+# focus the child container
+bindsym $mod+d focus child
+
+# set popups during fullscreen mode
+popup_during_fullscreen smart
+
+# customize workspace names
+#set $WS1 "1:    Terminal "
+#set $WS2 "2:    Files "
+#set $WS3 "3:    Webbrowser "
+#set $WS4 "4:    Music "
+#set $WS5 "5:    Office "
+#set $WS6 "6:    Graphic "
+#set $WS7 "7:    "
+#set $WS8 "8:    Chat "
+#set $WS9 "9:    "
+set $WS1 "1"
+set $WS2 "2"
+set $WS3 "3"
+set $WS4 "4"
+set $WS5 "5"
+set $WS6 "6"
+set $WS7 "7"
+set $WS8 "8"
+set $WS9 "9"
+
+# switch to workspace
+bindsym $mod+1 workspace $WS1
+bindsym $mod+2 workspace $WS2
+bindsym $mod+3 workspace $WS3
+bindsym $mod+4 workspace $WS4
+bindsym $mod+5 workspace $WS5
+bindsym $mod+6 workspace $WS6
+bindsym $mod+7 workspace $WS7
+bindsym $mod+8 workspace $WS8
+bindsym $mod+9 workspace $WS9
+#bindsym $mod+0 workspace $WS10
+
+# move focused container to workspace and follow
+bindsym $mod+Shift+1 move container to workspace $WS1; workspace $WS1
+bindsym $mod+Shift+2 move container to workspace $WS2; workspace $WS2
+bindsym $mod+Shift+3 move container to workspace $WS3; workspace $WS3
+bindsym $mod+Shift+4 move container to workspace $WS4; workspace $WS4
+bindsym $mod+Shift+5 move container to workspace $WS5; workspace $WS5
+bindsym $mod+Shift+6 move container to workspace $WS6; workspace $WS6
+bindsym $mod+Shift+7 move container to workspace $WS7; workspace $WS7
+bindsym $mod+Shift+8 move container to workspace $WS8; workspace $WS8
+bindsym $mod+Shift+9 move container to workspace $WS9; workspace $WS9
+
+# startup applications
+#exec --no-startup-id xset s off -dpms &
+#exec --no-startup-id xset b 0 0 0 &
+#exec --no-startup-id nitrogen --restore &
+#exec --no-startup-id fcitx &
+#exec --no-startup-id nm-applet &
+#exec --no-startup-id redshift &
+#exec --no-startup-id ~/.local/bin/hdmi-check
+#exec --no-startup-id dunst -config ~/.config/dunst/dunstrc
+#exec --no-startup-id compton -b --config ~/.config/compton.night.conf
+#exec_always --no-startup-id ~/.config/polybar/launch.sh
+
+# assign classes
+assign [class="Thunar"] $WS2
+assign [class="Firefox"] $WS3
+assign [class="Chromium"] $WS3
+assign [class="Vlc"] $WS4
+assign [class="Audacity"] $WS4
+assign [class="(?i)libreoffice"] $WS5
+assign [class="Gimp"] $WS6
+assign [class="Darktable"] $WS6
+assign [class="Inkscape"] $WS6
+assign [class="Line"] $WS8
+
+# reload the configuration file
+bindsym $mod+Shift+c reload
+# restart i3 inplace
+bindsym $mod+Shift+r restart
+# exit i3
+bindsym $mod+Shift+e exec i3-msg exit
+#bindsym $mod+Shift+e exec "i3-nagbar -t warning -f 'pango:Monaco 8' -m 'Do you really want to exit?' -b ' Exit  ' 'i3-msg exit'"
+
+
+#for_window [class=".*"] title_format "<span font='Monaco 10'>  > %title</span>"
+
+# BORDER
+new_window pixel $border-width
+new_float pixel $border-width
+
+# mousepad glitch fix
+hide_edge_borders none
+
+# show/hide border
+bindsym $mod+shift+b [class="^.*"] border toggle
+
+# toggle border
+#set $mode_border Toggle border: (1)OFF (2)NOR (3)BIG
+#bindsym $mod+b mode "$mode_border"
+
+#mode "$mode_border" {
+#    bindsym 1 mode "default", border pixel 1
+#    bindsym 2 mode "default", border pixel 5
+#    bindsym 3 mode "default", border pixel 10
+#    bindsym Return mode "default"
+#    bindsym Escape mode "default"
+#}
+
+# FLOATING WINDOWS
+#for_window [class="^.*"] floating enable
+for_window [class="^python*"] floating enable
+for_window [window_role="pop-up"] floating enable
+for_window [window_role="task_dialog"] floating enable
+for_window [title="Preferences$"] floating enable
+
+# toggle tile/float
+set $mode_tile Toggle tile/float: Tile (1) Float (2)
+bindsym $mod+Shift+space mode "$mode_tile"
+
+rmode "$mode_tile" {
+    bindsym 1 mode "default", [class="^.*"] floating disable, [class="^.*"] border toggle
+    bindsym 2 mode "default", [class="^.*"] floating enable, [class="^.*"] border toggle, [class="^.*"] border toggle
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+# RESIZE
+set $mode_resize Resize Mode
+bindsym $mod+r mode "$mode_resize"
+
+mode "$mode_resize" {
+        bindsym $left   resize shrink width 10 px or 10 ppt
+        bindsym $down   resize grow height 10 px or 10 ppt
+        bindsym $up     resize shrink height 10 px or 10 ppt
+        bindsym $right  resize grow width 10 px or 10 ppt
+
+        bindsym Left    resize shrink width 20 px or 20 ppt
+        bindsym Down    resize grow height 20 px or 20 ppt
+        bindsym Up      resize shrink height 20 px or 20 ppt
+        bindsym Right   resize grow width 20 px or 20 ppt
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+# start i3bar to display a workspace bar
+bar {
+  i3bar_command ~/.config/polybar/launch.sh
+  mode invisible
+  position bottom
+  #height $bar-height
+  tray_padding 8
+  tray_output none
+  font pango:Monaco 12
+  strip_workspace_numbers yes
+  #status_command conky -c $HOME/.config/i3/conky/conkyrc
+
+  colors {
+    background $base00
+    statusline $base06
+    separator $base02
+    #class             border   bg            text
+    focused_workspace  $base00  $base0D   $base00
+    active_workspace   $base0D  $base00   $base07
+    inactive_workspace $base0C  $base00   $base05
+    urgent_workspace   $base0F  $base00   $base05
+  }
+}
+
+# toggle i3bar
+bindsym --release $mod+m bar mode toggle
+
+# Audio
+bindsym --release XF86AudioRaiseVolume exec --no-startup-id amixer -c 1 sset 'Master' 5%+ && paplay /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga #&& notify-send "$(amixer -c 1 sget 'Master' | cut -d ']' -sf 2 | cut -c 2-)"
+bindsym --release XF86AudioLowerVolume exec --no-startup-id amixer -c 1 sset 'Master' 5%- && paplay /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga
+bindsym --release Shift+XF86AudioRaiseVolume exec --no-startup-id  amixer -c 1 sset 'Master' 15%+ && paplay /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga
+bindsym --release Shift+XF86AudioLowerVolume exec --no-startup-id  amixer -c 1 sset 'Master' 15%- && paplay /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga
+bindsym --release XF86AudioMute exec --no-startup-id amixer sset 'Master' toggle
+bindsym --release $mod+F6 exec --no-startup-id amixer -c 1 sset 'Master' 5%+ && paplay /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga
+bindsym --release $mod+F5 exec --no-startup-id amixer -c 1 sset 'Master' 5%- && paplay /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga
+bindsym --release $mod+F3 exec --no-startup-id amixer sset 'Master' toggle
+
+# sreen brightness controls
+bindsym XF86MonBrightnessUp exec xbacklight -inc 2
+bindsym Shift+XF86MonBrightnessUp exec xbacklight -inc 15
+bindsym XF86MonBrightnessDown exec xbacklight -dec 2
+bindsym Shift+XF86MonBrightnessDown exec xbacklight -dec 15
+
+# redshift
+bindsym --release $mod+ctrl+r exec ~/.local/bin/red.sh
+
+# vlc
+bindsym --release $mod+Down exec --no-startup-id audioinfo vlc --action playpause
+bindsym --release $mod+Left exec --no-startup-id audioinfo vlc --action prev
+bindsym --release $mod+Right exec --no-startup-id audioinfo vlc --action next
+
+# lock screen
+bindsym $mod+Shift+x exec ~/.local/bin/lock -t ""
+
+# screenshot
+bindsym --release Print exec --no-startup-id scrot /tmp/`date +%Y%m%d_%H%M%S`.png && exec notify-send 'SCROT' 'Screenshot taken (/tmp)'
+

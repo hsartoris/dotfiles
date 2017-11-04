@@ -1,0 +1,182 @@
+{
+   "500pxLabel": {
+      "description": "Label of 500px setting in sidebar",
+      "message": "500px"
+   },
+   "appsLabel": {
+      "description": "Label of apps link in top menu",
+      "message": "应用"
+   },
+   "backgroundLabel": {
+      "description": "Label of background image setting in sidebar",
+      "message": "背景"
+   },
+   "baiduLabel": {
+      "description": "Label of baidu setting in sidebar",
+      "message": "百度"
+   },
+   "bingLabel": {
+      "description": "Label of bing setting in sidebar",
+      "message": "必应"
+   },
+   "bookmarkLabel": {
+      "description": "Label of bookmark link in top menu",
+      "message": "书签"
+   },
+   "celsiusLabel": {
+      "description": "Label of celsius option in sidebar",
+      "message": "°C"
+   },
+   "displayOptionDescription": {
+      "description": "Description of display option setting in sidebar",
+      "message": "悬停是指只有鼠标移到所处位置才显示"
+   },
+   "displayOptionLabel": {
+      "description": "Label of display option setting in sidebar",
+      "message": "显示方式"
+   },
+   "dreamafarLabel": {
+      "description": "Label of dream afar setting in sidebar",
+      "message": "Dream Afar"
+   },
+   "extDescription": {
+      "description": "Extension Description",
+      "message": "每天打开新页面都是一段不期而遇的旅行"
+   },
+   "extName": {
+      "description": "Extension Name",
+      "message": "远方 New Tab"
+   },
+   "fahrenheitLabel": {
+      "description": "Label of fahrenheit option in sidebar",
+      "message": "°F"
+   },
+   "flickrLabel": {
+      "description": "Label of flickr setting in sidebar",
+      "message": "flickr"
+   },
+   "googleArtLabel": {
+      "description": "Label of google art setting in sidebar",
+      "message": "Google Art"
+   },
+   "googleEarthLabel": {
+      "description": "Label of google earth setting in sidebar",
+      "message": "Google Earth"
+   },
+   "googleLabel": {
+      "description": "Label of google setting in sidebar",
+      "message": "谷歌"
+   },
+   "hideLabel": {
+      "description": "Label of hide setting in sidebar",
+      "message": "隐藏"
+   },
+   "historyLabel": {
+      "description": "Label of history link in top menu",
+      "message": "历史记录"
+   },
+   "hoverLabel": {
+      "description": "Label of hover setting in sidebar",
+      "message": "悬停"
+   },
+   "imageIntervalDescription": {
+      "description": "Description of image changing interval setting in sidebar",
+      "message": "请选择图片更新间隔"
+   },
+   "imageIntervalLabel": {
+      "description": "Label of image changing interval setting in sidebar",
+      "message": "间隔"
+   },
+   "imageSourceDescription": {
+      "description": "Description of image source setting in sidebar",
+      "message": "请选择背景图片的图片源"
+   },
+   "imageSourceLabel": {
+      "description": "Label of image source setting in sidebar",
+      "message": "图片源"
+   },
+   "locationDescription": {
+      "description": "Description of location setting in sidebar",
+      "message": "请输入城市"
+   },
+   "locationLabel": {
+      "description": "Label of location setting in sidebar",
+      "message": "位置"
+   },
+   "loopLabel": {
+      "description": "Label of background source play mode option in sidebar",
+      "message": "循环"
+   },
+   "mostVisitedLabel": {
+      "description": "Label of most visited setting in sidebar",
+      "message": "常访问页面"
+   },
+   "noIntervalLabel": {
+      "description": "Label of background image changing interval option in sidebar",
+      "message": "无间隔"
+   },
+   "oneDayLabel": {
+      "description": "Label of background image changing interval option in sidebar",
+      "message": "每天"
+   },
+   "oneHourLabel": {
+      "description": "Label of background image changing interval option in sidebar",
+      "message": "每小时"
+   },
+   "oneMinuteLabel": {
+      "description": "Label of background image changing interval option in sidebar",
+      "message": "每分钟"
+   },
+   "opacityDescription": {
+      "description": "Description of opacity setting in sidebar",
+      "message": "拖动滑杆来设置透明度"
+   },
+   "opacityLabel": {
+      "description": "Label of opacity setting in sidebar",
+      "message": "透明度"
+   },
+   "randomLabel": {
+      "description": "Label of background source play mode option in sidebar",
+      "message": "随机"
+   },
+   "searchBarLabel": {
+      "description": "Label of search bar setting in sidebar",
+      "message": "搜索栏"
+   },
+   "searchEngineDescription": {
+      "description": "Description of search engine setting in sidebar",
+      "message": "请选择默认的搜索引擎"
+   },
+   "searchEngineLabel": {
+      "description": "Label of search engine setting in sidebar",
+      "message": "搜索引擎"
+   },
+   "showLabel": {
+      "description": "Label of show setting in sidebar",
+      "message": "显示"
+   },
+   "sourcePlayModeDescription": {
+      "description": "Description of background source play mode setting in sidebar",
+      "message": "请选择图片源显示顺序"
+   },
+   "sourcePlayModeLabel": {
+      "description": "Label of background source play mode setting in sidebar",
+      "message": "顺序"
+   },
+   "unsplashLabel": {
+      "description": "Label of unsplash setting in sidebar",
+      "message": "Unsplash"
+   },
+   "weatherLabel": {
+      "description": "Label of weather setting in sidebar",
+      "message": "天气"
+   },
+   "weatherUnitDescription": {
+      "description": "Description of weather unit setting in sidebar",
+      "message": "请选择温度单位"
+   },
+   "weatherUnitLabel": {
+      "description": "Label of weather unit setting in sidebar",
+      "message": "单位"
+   }
+}

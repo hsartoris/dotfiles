@@ -1,0 +1,417 @@
+.manual-pref-option-container{
+    margin-top:10px;
+    text-align:center;
+}
+.manual-pref-option{
+    cursor: pointer;
+}
+#duokeyboard-keyboard-preferences-container {
+    margin:-20px -40px 20px;
+    height:0;
+    position:relative;
+    overflow:hidden;
+    transition: height 0.5s ease-out;
+}
+#duokeyboard-keyboard-preferences-container.duokeyboard-pref-regular {
+    height:140px
+}
+#duokeyboard-keyboard-preferences-container.duokeyboard-pref-manual {
+    height:160px
+}
+#duokeyboard-keyboard-preferences button {
+    position:absolute;
+    right:40px;
+}
+#duokeyboard-keyboard-preferences, #duokeyboard-keyboard-manual{
+    background:#fff;
+    white-space:nowrap;
+    padding:20px 40px 0 40px;
+    width:100%;
+}
+#duokeyboard-keyboard-preferences-container div:last-child{
+    padding-bottom:20px;
+}
+.duokeyboard-key {
+    overflow:hidden;
+    transition: width 0.5s ease-out, margin 0.5s ease-out, border-radius 0.5s ease-out, height 0.5s ease-out;
+    position: relative;
+    font-family: "museo-sans-rounded", sans-serif;
+    vertical-align:top;
+    font-weight:500;
+    margin:2px;
+    border-radius:5px;
+    text-align:center;
+    height: 28px;
+    color:#2EA8E4;
+    padding-top: 5px;
+    background:#fff;
+    display:inline-block;
+}
+#duokeyboard-container{
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;
+    user-select: none;
+    transition: width 0.5s ease-out,
+        margin-left 0.5s ease-out;
+    width:453px;
+    background:#2EA8E4;
+    margin:auto;
+    padding:10px;
+    border-radius:10px;
+    position:absolute;
+    left: 50%;
+    margin-left: -226.5px;
+    bottom:0;
+    line-height:normal;
+}
+#duokeyboard-keyboard-preferences-container select{
+    width:auto;
+    padding:0;
+    display:inline-block;
+    -webkit-appearance: menulist;
+}
+#duokeyboard-keyboard-preferences-container select:disabled{
+    color:#999;
+}
+.key_preview{
+    border:0;
+    width:50%;
+    height:50%;
+    text-align:center;
+}
+.duokeyboard-key-regular{
+    width:25px;
+}
+.duokeyboard-key::after{
+    content:"\A0";
+}
+.duokeyboard-key-Backspace {
+    width:51px;
+}
+.duokeyboard-key-Backspace::after {
+    content: "\2190";
+}
+.duokeyboard-key-Backslash {
+    width:37px;
+}
+.duokeyboard-key-Tab{
+    width:39px;
+}
+.duokeyboard-key-ControlRight, .duokeyboard-key-ControlLeft, .duokeyboard-key-AltLeft, .duokeyboard-key-AltRight {
+    width:45px;
+}
+.duokeyboard-key-CapsLock {
+    width:54px;
+}
+.duokeyboard-key-CapsLock::after {
+    content:"Caps"
+}
+.duokeyboard-key-Enter {
+    width:52px;
+}
+.duokeyboard-key-Enter::after {
+    content: "\21b5";
+}
+.duokeyboard-key-ShiftLeft {
+    width:73px;
+}
+.duokeyboard-key-Tab::after {
+    content: "\21b9";
+}
+.duokeyboard-key-ShiftLeft::after, .duokeyboard-key-ShiftRight::after {
+    content: "\21a5";
+}
+.duokeyboard-key-ControlRight::after , .duokeyboard-key-ControlLeft::after {
+    content:"Ctrl";
+}
+.duokeyboard-key-ShiftRight{
+    width:62px;
+}
+.duokeyboard-key-AltLeft::after {
+    content:"Alt"
+}
+.duokeyboard-key-AltRight::after {
+    content:"Alt Gr"
+}
+.duokeyboard-key-Space{
+    width:232px;
+}
+.duokeyboard-key-Space::after{
+    content:"\A0";
+}
+#duokeyboard-holder {
+    margin: -20px -20px 20px;
+}
+#duokeyboard-holder {
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    transition: height 0.5s ease-out;
+}
+#duokeyboard-holder.duokeyboard-holder-hidden,
+#duokeyboard-keyboard-preferences-container.duokeyboard-holder-hidden {
+    height:0;
+}
+#duokeyboard-keyboard-preferences{
+    color:#999;
+}
+.DuoKeyboard-field-id {
+    color:#2996f3;
+}
+/*Large settings*/
+#duokeyboard-container.duokeyboard-large {
+    margin-left: -265px;
+    width:530px;
+}
+.duokeyboard-large .duokeyboard-key-regular{
+    width:30px;
+}
+.duokeyboard-large .duokeyboard-key-CapsLock{
+    width:59px;
+}
+.duokeyboard-large .duokeyboard-key-Enter {
+    width:69px;
+}
+.duokeyboard-large .duokeyboard-key-Tab {
+    width:44px;
+}
+.duokeyboard-large .duokeyboard-key-Shift {
+    width:71px;
+}
+.duokeyboard-large .duokeyboard-key-ShiftRight{
+    width:88px;
+}
+.duokeyboard-large .duokeyboard-key-Backslash {
+    width:50px;
+}
+.duokeyboard-large .duokeyboard-key-ControlLeft,
+.duokeyboard-large .duokeyboard-key-ControlRight,
+.duokeyboard-large .duokeyboard-key-AltLeft,
+.duokeyboard-large .duokeyboard-key-AltRight{
+    width:52px;
+}
+.duokeyboard-large .duokeyboard-key-Space {
+    width:282px;
+}
+.duokeyboard-key-original{
+    transition: opacity 0.5s ease-out ;
+    opacity:0;
+    position:absolute;
+    top:4px;
+    left:4px;
+    font-size: 12px;
+}
+.duokeyboard-large .duokeyboard-key-original{
+    opacity:1;
+}
+
+.duokeyboard-bumper-key {
+    background-color:#ffdf63;
+}
+.duokeyboard-key-bumper{
+    transition: border-bottom 0.5s ease-out,width 0.5s ease-out, left 0.5s ease-out, bottom 0.5s ease-out ;
+    position: absolute;
+    border-bottom: #FF0000 2px solid;
+    bottom: 4px;
+    width: 9px;
+    left: 8px;
+}
+.duokeyboard-key-replacement{
+    transition: height 0.5s ease-out,
+        width 0.5s ease-out, bottom 0.5s ease-out,
+        line-height 0.5s ease-out,
+        right 0.5s ease-out;
+
+    position:absolute;
+    margin:auto;
+    height:28px;
+    line-height:28px;
+    width:20px;
+    bottom:calc(50% - 14px);
+    right:calc(50% - 10px);
+
+}
+.duokeyboard-large .duokeyboard-key-replacement{
+    color:black;
+    position:absolute;
+    bottom:3px;
+    right:4px;
+    height:1em;
+    line-height:1em;
+    width:1em;
+    font-size: 12px;
+}
+.duokeyboard-large .duokeyboard-key-Backslash .duokeyboard-key-original {
+    left:8px;
+}
+.duokeyboard-large .duokeyboard-key-Backslash .duokeyboard-key-replacement{
+    right:8px;
+}
+#duokeyboard-container .duokeyboard-deadkey {
+    color:red;
+}
+/*.duokeyboard-key:hover, /**/
+.duokeyboard-key-pressed {
+    background:#1493D1;
+    color:#FFF;
+    cursor:pointer
+}
+.duokeyboard-key-bumper-hidden{
+    border-bottom-color:transparent;
+
+}
+.duokeyboard-large .duokeyboard-key-bumper{
+    width: 10px;
+    left: 10px;
+    bottom: 1px;
+}
+
+.duokeyboard-row{
+    height: 32px;
+}
+.duokeyboard-button {
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 100px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 20px;
+    padding: 8px 20px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+.duokeyboard-button-green {
+    background: #7eb530 none repeat scroll 0 0;
+    border-color: #7eb530;
+    color: #fff;
+}
+.duokeyboard-button-green:hover, .success:hover {
+    background: #94c500 none repeat scroll 0 0;
+    border-color: #94c500;
+}
+.duokeyboard-hide {
+    display:none;
+}
+/*duokeyboard-key-layout*/
+.duokeyboard-key-EnterAlt1{
+    border-bottom-right-radius:0;
+    border-top-right-radius:0;
+    margin-right:0;
+    height:32px;
+}
+.duokeyboard-key-EnterAlt2{
+    margin-left:0;
+    height:32px;
+    border-bottom-left-radius:0;
+    border-bottom-right-radius:0;
+    border-top-left-radius:0;
+}
+.duokeyboard-key-IntlBackslash,
+.duokeyboard-key-BackslashAlt1,
+.duokeyboard-key-BackslashAlt2,
+.duokeyboard-key-EnterAlt1,
+.duokeyboard-key-EnterAlt2,
+
+.duokeyboard-large .duokeyboard-key-IntlBackslash,
+.duokeyboard-large .duokeyboard-key-BackslashAlt1,
+.duokeyboard-large .duokeyboard-key-BackslashAlt2,
+.duokeyboard-large .duokeyboard-key-EnterAlt1,
+.duokeyboard-large .duokeyboard-key-EnterAlt2,
+
+.duokeyboard-key-layout-101A  .duokeyboard-key-Backslash,
+.duokeyboard-key-layout-102 .duokeyboard-key-Backslash,
+.duokeyboard-key-layout-102A  .duokeyboard-key-Backslash{
+    width: 0;
+    margin: 2px 0;
+}
+/* small keyboard key layout*/
+.duokeyboard-key-layout-102  .duokeyboard-key-ShiftLeft,
+.duokeyboard-key-layout-102A  .duokeyboard-key-ShiftLeft{
+    width:44px;
+}
+.duokeyboard-key-layout-101A  .duokeyboard-key-Enter,
+.duokeyboard-key-layout-102A  .duokeyboard-key-Enter {
+    border-top-right-radius:0;
+}
+.duokeyboard-key-layout-102  .duokeyboard-key-EnterAlt1 {
+    margin-left: 2px;
+}
+.duokeyboard-key-layout-101A  .duokeyboard-key-EnterAlt1,
+.duokeyboard-key-layout-102A  .duokeyboard-key-EnterAlt1{
+    border-bottom-left-radius: 0;
+    margin-left: 2px;
+}
+.duokeyboard-key-layout-101A  .duokeyboard-key-EnterAlt1,
+.duokeyboard-key-layout-101A  .duokeyboard-key-EnterAlt2,
+.duokeyboard-key-layout-102A  .duokeyboard-key-EnterAlt1,
+.duokeyboard-key-layout-102A  .duokeyboard-key-EnterAlt2{
+    width:19px;
+}
+.duokeyboard-key-layout-101A .duokeyboard-key-Backspace,
+.duokeyboard-key-layout-101A .duokeyboard-key-BackslashAlt1,
+.duokeyboard-key-layout-102 .duokeyboard-key-BackslashAlt2,
+.duokeyboard-key-layout-102A .duokeyboard-key-Backspace,
+.duokeyboard-key-layout-102A .duokeyboard-key-BackslashAlt1,
+.duokeyboard-key-layout-102 .duokeyboard-key-IntlBackslash,
+.duokeyboard-key-layout-102A .duokeyboard-key-IntlBackslash{
+    width:25px;
+    margin: 2px;
+}
+.duokeyboard-key-layout-101A .duokeyboard-key-Backspace,
+.duokeyboard-key-layout-102A .duokeyboard-key-Backspace {
+    width:23px;
+}
+.duokeyboard-key-layout-102 .duokeyboard-key-Enter {
+    border-top-right-radius:0;
+    border-top-left-radius:0;
+    width:22px;
+}
+.duokeyboard-key-layout-102 .duokeyboard-key-EnterAlt1 {
+    width:15px;
+    height:28px;
+}
+.duokeyboard-key-layout-102 .duokeyboard-key-EnterAlt2 {
+    width:22px;
+}
+/*large duokeyboard-key-layout-101*/
+.duokeyboard-large .duokeyboard-key-Backspace{
+    width: 64px;
+}
+.duokeyboard-large .duokeyboard-key-ShiftLeft {
+    width:74px;
+}
+.duokeyboard-large.duokeyboard-key-layout-101A  .duokeyboard-key-EnterAlt1,
+.duokeyboard-large.duokeyboard-key-layout-101A  .duokeyboard-key-EnterAlt2,
+.duokeyboard-large.duokeyboard-key-layout-102A  .duokeyboard-key-EnterAlt1,
+.duokeyboard-large.duokeyboard-key-layout-102A  .duokeyboard-key-EnterAlt2 {
+    width:25px;
+}
+.duokeyboard-large.duokeyboard-key-layout-101A .duokeyboard-key-BackslashAlt1,
+.duokeyboard-large.duokeyboard-key-layout-102A .duokeyboard-key-BackslashAlt1,
+.duokeyboard-large.duokeyboard-key-layout-102 .duokeyboard-key-BackslashAlt2,
+.duokeyboard-large.duokeyboard-key-layout-101A .duokeyboard-key-Backspace,
+.duokeyboard-large.duokeyboard-key-layout-102A .duokeyboard-key-Backspace,
+.duokeyboard-large.duokeyboard-key-layout-102 .duokeyboard-key-IntlBackslash,
+.duokeyboard-large.duokeyboard-key-layout-102A .duokeyboard-key-IntlBackslash{
+    width:30px;
+}
+.duokeyboard-large.duokeyboard-key-layout-102  .duokeyboard-key-ShiftLeft,
+.duokeyboard-large.duokeyboard-key-layout-102A  .duokeyboard-key-ShiftLeft{
+    width:40px;
+}
+.duokeyboard-large.duokeyboard-key-layout-102 .duokeyboard-key-Enter,
+.duokeyboard-large.duokeyboard-key-layout-102 .duokeyboard-key-EnterAlt2 {
+    width:35px;
+}
+.duokeyboard-large.duokeyboard-key-layout-102 .duokeyboard-key-EnterAlt1 {
+    width:15px;
+    height:28px;
+}

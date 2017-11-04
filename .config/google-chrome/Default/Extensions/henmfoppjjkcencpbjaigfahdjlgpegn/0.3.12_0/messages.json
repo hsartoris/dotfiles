@@ -1,0 +1,9 @@
+{
+    "messages": [
+        {
+            "version": "0.0.1.0",
+            "title": "Added Top Sites",
+            "message": "Showing most visited URL"
+        }
+    ]
+}

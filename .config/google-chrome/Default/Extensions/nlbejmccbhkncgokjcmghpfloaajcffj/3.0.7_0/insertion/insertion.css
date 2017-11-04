@@ -1,0 +1,110 @@
+@font-face {
+    font-family: 'sfui';
+    src: url('chrome-extension://__MSG_@@extension_id__/assets/fonts/SF-UI-Display-Regular.otf');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'sfui';
+    src: url('chrome-extension://__MSG_@@extension_id__/assets/fonts/SF-UI-Display-Ultralight.otf');
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: 'sfui';
+    src: url('chrome-extension://__MSG_@@extension_id__/assets/fonts/SF-UI-Display-Thin.otf');
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: 'sfui';
+    src: url('chrome-extension://__MSG_@@extension_id__/assets/fonts/SF-UI-Display-Regular.otf');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'sfui';
+    src: url('chrome-extension://__MSG_@@extension_id__/assets/fonts/SF-UI-Display-Medium.otf');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'sfui';
+    src: url('chrome-extension://__MSG_@@extension_id__/assets/fonts/SF-UI-Display-Semibold.otf');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'sfui';
+    src: url('chrome-extension://__MSG_@@extension_id__/assets/fonts/SF-UI-Display-Bold.otf');
+    font-weight: 700;
+}
+
+#_af_content_wall {
+    font-family: 'sfui' !important;
+    position: fixed;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    z-index: 9999999999;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 5px 0 rgba(0,0,0,0.06);
+    border-radius: 2px;
+    height: 70px;
+
+    color: #636B80;
+    font-size: 16px;
+    text-align: center;
+    line-height: 70px;
+}
+
+#_af_content_wall_timer {
+    font-weight: 500;
+    color: #171F36;
+    position: absolute;
+    left: 50%;
+    margin-left: 145px;
+    top: 0;
+}
+
+#_af_content_wall_counter {
+    height: 4px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+#_af_content_wall_counter2 {
+    height: 4px;
+    width: 0px;
+    background-color: #2FADF8;
+}
+
+#_af_content_wall_logo {
+    background-image: url('chrome-extension://__MSG_@@extension_id__/assets/insertion/logo.png');
+    background-size: 162px 28px;
+    width: 162px;
+    height: 28px;
+    position: absolute;
+    left: 21px;
+    top: 21px;
+}
+
+#_af_content_wall_button {
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 100px;
+    background-color: #2FA6F8;
+    height: 40px;
+    width: 200px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+}

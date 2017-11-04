@@ -1,0 +1,265 @@
+*{
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: medium none;
+}
+body{
+    font-family: 'verdana', sans-serif;
+    font-size:15px;
+    background:#e9e9e9;
+    color:#999;
+}
+h1, h2, h3, h4, h5{
+    color:#3c3c3c;
+}
+p{
+    margin-top:10px;
+    margin-bottom:10px
+}
+#container {
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.08);
+    width:80%;
+    margin:auto;
+}
+#main {
+    padding:20px;
+    background:#FFF;
+    margin-top:110px;
+    border-radius: 10px 10px 0  0;
+
+
+}
+footer {
+    padding:20px;
+    background:#DBDBDB;
+    border-radius: 0  0 10px 10px ;
+}
+.topbar > div{
+    width:80%;
+    margin:0 auto;
+}
+.topbar *{
+    color:#FFF;
+}
+.topbar {
+    background-color: rgba(255, 255, 255, 0.8);
+    background-image: linear-gradient(to bottom, #fff, rgba(255, 255, 255, 0.5));
+    background-repeat: repeat-x;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.05);
+
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 200;
+}
+.topbar-blue {
+    background: rgba(32, 166, 231, 0.8) linear-gradient(to bottom, #20a8e9, rgba(30, 158, 220, 0.5)) repeat-x scroll 0 0;
+    height: auto;
+    min-height: 70px;
+}
+.btn {
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 100px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 20px;
+    padding: 8px 20px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+.btn-green {
+    background: #7eb530 none repeat scroll 0 0;
+    border-color: #7eb530;
+    color: #fff;
+}
+.btn-green:hover, .success:hover {
+    background: #94c500 none repeat scroll 0 0;
+    border-color: #94c500;
+}
+.divider {
+    margin-top:20px;
+}
+
+
+.responsive-options {
+    display:inline-block;
+    margin-bottom:30px
+}
+
+.responsive-option:first-child{
+    border-radius:10px  0 0 10px;
+}
+.responsive-option:last-child{
+    border-radius:0 10px  10px 0;
+}
+.responsive-option, .responsive-button {
+    border:black solid 1px;
+    margin: 4px 0;
+    padding: 5px;
+    cursor:pointer;
+    display:inline-block;
+}
+
+.responsive-disabled > span.responsive-option {
+    background:#ddd;
+    color:#AAA;
+}
+
+.responsive-select {
+    margin:10px;
+}
+.responsive-button {
+    border-radius:10px;
+}
+.responsive-option-selected {
+    background:#333;
+    color:#fff;
+}
+.responsive-option:hover, .responsive-button:hover{
+    color:#000;
+    background:#FFF;
+}
+.responsive-option-selected:hover {
+    background:#333;
+    color:#fff;
+}
+.btn-disabled {
+    background:#eee;
+    border-color:#cccccc;
+    color:#eee;
+}
+.btn-disabled, .btn-disabled:hover {
+    background: #c0c0c0 none repeat scroll 0 0;
+    border-color: #c0c0c0;
+    color: #e4e4e4;
+    cursor:default;
+}
+#duolingo-save-info{
+    opacity:0;
+    color:#2996f3;
+    transition: opacity 0.2s linear;
+}
+#testarea {
+    font-family: 'verdana', sans-serif;
+    font-size: 16px;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.05);
+    border:solid 2px #e9e9e9;
+    color: #3c3c3c;
+    border-radius:10px;
+    padding:10px;
+    height:100px;
+    min-height:100px;
+    width:60%;
+    margin:10px auto 0;
+    display:block;
+    min-width: 450px;
+    resize: none;
+}
+
+#main.no-testarea + footer, #main.no-testarea #testarea, #main.no-testarea .manual-pref-option-container{
+    display:none;
+}
+#main.no-testarea {
+    border-radius: 10px ;
+
+}
+#main.no-testarea {
+    margin-bottom: 60px;
+}
+ul {
+    margin: 10px 20px;
+    list-style-type: square;
+}
+li {
+    margin-bottom: 5px;
+}
+li:last-child {
+    margin-bottom: 0px;
+}
+figure {
+    text-align:center;
+    margin:10px 0;
+}
+figure img{
+    max-width:100%;
+}
+.duokeyboard-info-table {
+    text-align:center;
+    border-collapse: collapse;
+    margin: 20px auto;
+}
+.duokeyboard-info-table td:first-child, .duokeyboard-info-table th:first-child {
+    text-align:left;
+}
+.duokeyboard-align-left {
+    text-align:left;
+}
+.duokeyboard-info-table td, .duokeyboard-info-table th {
+    border:solid 1px #e4e4e4;
+    padding:5px;
+    transition: padding 0.5s linear;
+}
+.duokeyboard-info-table caption {
+    margin-bottom: 5px;
+}
+@media only screen and (max-width: 1110px) {
+    .duokeyboard-info-table td, .duokeyboard-info-table th {
+        padding:3px;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    .duokeyboard-info-table td, .duokeyboard-info-table th {
+        padding:0px;
+    }
+}
+
+.topbar {
+    user-select: none;
+}
+#main_title {
+    cursor:default;
+    display:inline-block;
+    float:left;
+    margin:17px;
+}
+#menu {
+    display: inline-block;
+    margin: 17px 0 0 17px;
+    padding: 0;
+    position: relative;
+    width: auto;
+    list-style: none;
+}
+#menu li{
+    float: left;
+}
+
+#menu a {
+    border-radius: 98px;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-size: 15px;
+    font-weight: 700;
+    margin: 0 2px;
+    padding: 8px 15px;
+}
+#menu a.selected, #menu a:hover, .current-page {
+    background-color:#1493d1;
+}
+a:link, a:visited, a.duokeyboard-link {
+    color:#2EA8E4;
+    cursor:pointer;
+    text-decoration:none;
+}
+#duokeyboard-keyboard-preferences-container{
+    height:0 !important;    
+}

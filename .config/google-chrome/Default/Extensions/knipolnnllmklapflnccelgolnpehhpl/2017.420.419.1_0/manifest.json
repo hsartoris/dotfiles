@@ -1,0 +1,28 @@
+{
+   "app": {
+      "background": {
+         "scripts": [ "scripts/main.js" ]
+      }
+   },
+   "default_locale": "en",
+   "description": "__MSG_CHROME_APP_DESCRIPTION__",
+   "externally_connectable": {
+      "ids": [  ],
+      "matches": [ "https://*.google.com/*" ]
+   },
+   "icons": {
+      "128": "images_5/icon_128.png",
+      "48": "images_5/icon_48.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCbQkge6A0lsrX4zBU1g0i4YbG3zXgeK1ZpeUXHjyTBhH/scR3k7TxjwryeEFPHuKRm3kgv4ry7mUXavsZDk0LBPmhGE7Dr4eQyflEdX8icJQBrD143R+unGbhJAlyFRhSx/6ZDHMIydq/V7rzJEBAn7/9tFhwJd5hi+794/U0mTwIDAQAB",
+   "manifest_version": 2,
+   "minimum_chrome_version": "53.0.0.0",
+   "name": "__MSG_CHROME_HANGOUTS_SHORT_NAME__",
+   "oauth2": {
+      "client_id": "1021803392181-71juemdl03adpl2n0tso7nl7hq83g2qg.apps.googleusercontent.com",
+      "scopes": [ "https://www.googleapis.com/auth/chat", "https://www.googleapis.com/auth/googlevoice", "https://www.googleapis.com/auth/client_channel", "https://www.googleapis.com/auth/youtube.readonly", "https://www.googleapis.com/auth/plus.circles.read", "https://www.googleapis.com/auth/plus.peopleapi.readwrite", "https://www.googleapis.com/auth/plus.me", "https://www.googleapis.com/auth/plus.contactphotos", "https://www.googleapis.com/auth/hangouts", "https://www.googleapis.com/auth/cloud-platform", "https://www.googleapis.com/auth/photos" ]
+   },
+   "permissions": [ "alarms", "alwaysOnTopWindows", "app.window.alpha", "app.window.shape", "audioCapture", "background", "browser", "experimental", "identity", "idle", "notifications", "storage", "system.display", "webview", "*://*.google.com/*" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2017.420.419.1"
+}
