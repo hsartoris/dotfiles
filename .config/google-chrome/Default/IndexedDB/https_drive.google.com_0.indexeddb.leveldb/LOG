@@ -1,6 +1,0 @@
-2017/11/04-12:57:36.321 4674 Reusing MANIFEST /home/hsartoris/.config/google-chrome/Default/IndexedDB/https_drive.google.com_0.indexeddb.leveldb/MANIFEST-000001
-2017/11/04-12:57:36.322 4674 Recovering log #164
-2017/11/04-12:57:36.354 4674 Reusing old log /home/hsartoris/.config/google-chrome/Default/IndexedDB/https_drive.google.com_0.indexeddb.leveldb/000164.log 
-2017/11/04-12:57:38.093 3156 Level-0 table #168: started
-2017/11/04-12:57:38.213 3156 Level-0 table #168: 832744 bytes OK
-2017/11/04-12:57:38.322 3156 Delete type=0 #164
