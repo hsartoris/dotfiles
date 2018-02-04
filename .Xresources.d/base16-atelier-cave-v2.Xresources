@@ -25,8 +25,10 @@
 *.background:   base00
 #endif
 *.cursorColor:  base05
+!*fading: 15
+!*fadeColor:	base02
 
-*.color0:       base00
+*.color0:       base01
 *.color1:       base08
 *.color2:       base0B
 *.color3:       base0A
@@ -43,3 +45,7 @@
 *.color13:      base0C
 *.color14:      base0F
 *.color15:      base07
+
+*.bc: base00
+*.hlfg: base06
+*.hlbg: base03

@@ -8,6 +8,11 @@ URxvt.inheritPixmap: false
 !URxvt*depth: 32
 !URxvt*background: rgba:2200/2700/3200/f555
 
+URxvt.iso14755: false
+URxvt.iso14755_54: false
+
+URxvt.mouseWheelScrollPage: false
+
 ! Transparency - fake
 !URxvt.transparent: true
 !URxvt.shading: 20
@@ -18,4 +23,6 @@ URxvt*loginShell: true
 ! Font settings
 !URxvt.font: xft:Oxygen Mono:size=11
 URxvt.font: xft:DejaVu Sans Mono:size=10
-URxvt.letterSpace: -1
+!URxvt.font: xft:unifont:size=12	
+!URxvt.font: xft:envypn:size=15
+!URxvt.letterSpace: -1

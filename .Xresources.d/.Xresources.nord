@@ -6,8 +6,7 @@
 !#include ".Xresources.d/colors-eighties"
 !#include ".Xresources.d/colors-tomorrow-night"
 !#include ".Xresources.d/base16-atelier-cave-v2.Xresources"
-!#include ".Xresources.d/colors-nord"
-#include ".Xresources.d/cyberpunk_neon.Xresources"
+#include ".Xresources.d/colors-nord"
 
 ! Font Settings
 #include ".Xresources.d/fonts"
