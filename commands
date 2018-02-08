@@ -1,0 +1,5 @@
+fc-match (fc-match -a)
+xlsfonts
+xset +fp <fontdir>
+xset fp rehash
+
