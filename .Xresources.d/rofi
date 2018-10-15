@@ -1,7 +1,9 @@
-rofi.color-enabled: true
-
-!			bg		border	separator
-rofi.color-window:	#2E3440,	nord3, nord3
-!			bg		fg	     bg-alt hl-bg hl-fg
-rofi.color-normal:	background,	.color3, .color8, .background, .foreground
-
+rofi.width: 		80
+rofi.padding: 		120
+rofi.line-margin: 	0
+rofi.lines: 		4
+rofi.separator-style:	none
+rofi.columns:		3
+rofi.font:		xos4 Terminus 17
+rofi.bw:		0
+rofi.eh:		2

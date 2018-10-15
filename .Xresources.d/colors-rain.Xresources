@@ -1,0 +1,45 @@
+URxvt*foreground: #CAD4E4
+XTerm*foreground: #CAD4E4
+URxvt*background: #010208
+XTerm*background: #010208
+URxvt*cursorColor: #CAD4E4
+XTerm*cursorColor: #010208
+*color0: #010208
+*.color0: #010208
+*color1: #727678
+*.color1: #727678
+*color2: #83837B
+*.color2: #83837B
+*color3: #2D4890
+*.color3: #2D4890
+*color4: #747A84
+*.color4: #747A84
+*color5: #7A848B
+*.color5: #7A848B
+*color6: #898C8F
+*.color6: #898C8F
+*color7: #CAD4E4
+*.color7: #CAD4E4
+*color8: #666666
+*.color8: #666666
+*color9: #727678
+*.color9: #727678
+*color10: #83837B
+*.color10: #83837B
+*color11: #2D4890
+*.color11: #2D4890
+*color12: #747A84
+*.color12: #747A84
+*color13: #7A848B
+*.color13: #7A848B
+*color14: #898C8F
+*.color14: #898C8F
+*color15: #CAD4E4
+*.color15: #CAD4E4
+*color66: #010208
+rofi.color-window: argb:FF010208, #010208, #83837B
+rofi.color-normal: argb:FF010208, #CAD4E4, #010208, #83837B, #010208
+rofi.color-active: argb:FF010208, #CAD4E4, #010208, #83837B, #010208
+rofi.color-urgent: argb:FF010208, #727678, #010208, #727678, #CAD4E4
+emacs*background: #010208
+emacs*foreground: #CAD4E4

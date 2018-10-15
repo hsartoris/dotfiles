@@ -8,7 +8,9 @@
 !#include ".Xresources.d/base16-atelier-cave-v2.Xresources"
 !#include ".Xresources.d/colors-nord"
 #include ".Xresources.d/cyberpunk_neon.Xresources"
-
+!#include ".Xresources.d/colors-iceland.Xresources"
+!#include ".Xresources.d/colors-rain.Xresources"
+!#include ".Xresources.d/colors-infra.Xresources"
 ! Font Settings
 #include ".Xresources.d/fonts"
 
@@ -17,4 +19,4 @@
 URxvt.perl-extcommon: default,clipboard,config-reload
 
 ! rofi
-!#include ".Xresources.d/rofi"
+#include ".Xresources.d/rofi"

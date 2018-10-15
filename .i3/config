@@ -1,4 +1,3 @@
-# Author: Bram de Haan (http://atelierbramdehaan.nl)
 #
 # You can use these variables anywhere in the i3 configuration file.
 
@@ -19,33 +18,43 @@ set $base0D #576ddb
 set $base0E #955ae7
 set $base0F #bf40bf
 
+exec_always `setxkbmap -layout us,ru`
+exec_always `setxkbmap -option 'grp:alt_shift_toggle'`
 
-exec `xrdb ~/.Xresources`
+exec_always --no-startup-id xrdb ~/.Xresources
+
 
 
 # colors
-#set_from_resource $border       i3wm.color0 $base00
-#set_from_resource $background   i3wm.color0 $base00
-#set_from_resource $text         i3wm.color7 $base07
-#set_from_resource $active       i3wm.color4 $base05
-#set_from_resource $inactive     i3wm.color7 $base07
+set_from_resource $color0       color0 $base00
+set_from_resource $color3 	color3 $base0A
+set_from_resource $color10   	color10 $base0B
+set_from_resource $color12      color12 $base0D
+set_from_resource $color7	color7 $base05
+set_from_resource $color8       color8 $base01
+set_from_resource $color14	color14 $base0F
+set_from_resource $color15      color15 $base07
+
+set $bgcolor "'$color8'"
+#bindsym $mod+b exec 
+exec --no-startup-id `xsetroot -solid $bgcolor`
 
 # Basic color configuration using the Base16 variables for windows and borders.
 # Property Name         Border  BG      Text    Indicator
-client.focused          $base0D $base0D $base07 $base0D $base0D
-client.focused_inactive $base0B $base0B $base07 $base04
-client.unfocused        $base01 $base00 $base07 $inactive
-client.urgent           $base0F $base0F $base07 $active
-client.placeholder      $border $background $base07 $active
-client.background       $border
+client.focused          $color12 $color12 $color15 $color12 $color12
+client.focused_inactive $color10 $color10 $color7  $color7
+client.unfocused        $color8  $color8  $color15 $color8
+client.urgent           $color14 $color14 $color15 $color12
+client.placeholder      $color3 $color0 $color15 $color12
+client.background       $color0
 
 set $bar-height  40
-set $border-width 2
+set $border-width 0
 
 #for_window [class="^.*"] floating enable
 
 # font for window titles and bar
-font pango:DejaVu Sans Mono 8
+font envypn-13 13
 
 # use win key
 set $mod Mod4
@@ -64,8 +73,10 @@ floating_modifier $mod
 focus_follows_mouse no
 
 # start a terminal
-bindsym $mod+Return exec urxvt
+bindsym $mod+Return exec urxvt -cd "`xcwd`"
 
+# switch theme
+bindsym $mod+T exec ~/.local/bin/switchTheme
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -113,7 +124,7 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
 
 # change container layout
-bindsym $mod+s layout stacking
+#bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
@@ -127,15 +138,6 @@ bindsym $mod+d focus child
 popup_during_fullscreen smart
 
 # customize workspace names
-#set $WS1 "1:    Terminal "
-#set $WS2 "2:    Files "
-#set $WS3 "3:    Webbrowser "
-#set $WS4 "4:    Music "
-#set $WS5 "5:    Office "
-#set $WS6 "6:    Graphic "
-#set $WS7 "7:    "
-#set $WS8 "8:    Chat "
-#set $WS9 "9:    "
 set $WS1 "1"
 set $WS2 "2"
 set $WS3 "3"
@@ -175,15 +177,16 @@ bindsym $mod+Shift+9 move container to workspace $WS9; workspace $WS9
 #exec --no-startup-id nitrogen --restore &
 #exec --no-startup-id fcitx &
 #exec --no-startup-id nm-applet &
-#exec --no-startup-id redshift &
+exec --no-startup-id redshift &
 #exec --no-startup-id ~/.local/bin/hdmi-check
 #exec --no-startup-id dunst -config ~/.config/dunst/dunstrc
-#exec --no-startup-id compton -b --config ~/.config/compton.night.conf
+exec `~/.local/bin/startCompton &`
 #exec_always --no-startup-id ~/.config/polybar/launch.sh
+exec `~/.fehbg &`
 
 # assign classes
-assign [class="Thunar"] $WS2
-assign [class="Firefox"] $WS3
+assign [class="chrome"] $WS1
+assign [class="Firefox"] $WS1
 assign [class="Chromium"] $WS3
 assign [class="Vlc"] $WS4
 assign [class="Audacity"] $WS4
@@ -205,7 +208,10 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -f 'pango:Monaco 8' -m 'Do you r
 #for_window [class=".*"] title_format "<span font='Monaco 10'>  > %title</span>"
 
 # BORDER
-new_window pixel $border-width
+
+smart_borders on
+
+new_window pixel 0 
 new_float pixel $border-width
 
 # mousepad glitch fix
@@ -233,6 +239,9 @@ for_window [window_role="pop-up"] floating enable
 for_window [window_role="task_dialog"] floating enable
 for_window [title="Preferences$"] floating enable
 for_window [class="feh"] floating enable
+for_window [class="matplotlib"] floating enable
+for_window [class="etcher-electron"] floating enable
+for_window [class="Tor Browser"] floating enable
 
 # toggle tile/float
 set $mode_tile Toggle tile/float: Tile (1) Float (2)
@@ -245,15 +254,30 @@ mode "$mode_tile" {
     bindsym Escape mode "default"
 }
 
+# gaps
+gaps inner 0
+gaps outer 0
+
+bindsym $mod+g exec --no-startup-id `~/.local/bin/toggle_gaps.sh`
+
+set $mode_gaps Toggle gaps: (1)Off (2)Normal (3)Huge
+bindsym $mod+n mode "$mode_gaps"
+mode "$mode_gaps" {
+    bindsym 1 mode "default", gaps inner current set 0, gaps outer all set 0
+    bindsym 2 mode "default", gaps inner current set 20
+    bindsym 3 mode "default", gaps inner current set 40
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
 # RESIZE
 set $mode_resize Resize
 bindsym $mod+r mode "$mode_resize"
 
 mode "$mode_resize" {
-        bindsym $left   resize shrink width 10 px or 10 ppt
-        bindsym $down   resize grow height 10 px or 10 ppt
-        bindsym $up     resize shrink height 10 px or 10 ppt
-        bindsym $right  resize grow width 10 px or 10 ppt
+        bindsym $left   resize shrink width 5 px or 5 ppt
+        bindsym $down   resize grow height 5 px or 5 ppt
+        bindsym $up     resize shrink height 5 px or 5 ppt
+        bindsym $right  resize grow width 5 px or 5 ppt
 
         bindsym Left    resize shrink width 20 px or 20 ppt
         bindsym Down    resize grow height 20 px or 20 ppt
@@ -293,20 +317,20 @@ bar {
 bindsym --release $mod+m bar mode toggle
 
 # Audio
-bindsym --release XF86AudioRaiseVolume exec --no-startup-id amixer -c 1 sset 'Master' 5%+ && paplay /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga #&& notify-send "$(amixer -c 1 sget 'Master' | cut -d ']' -sf 2 | cut -c 2-)"
-bindsym --release XF86AudioLowerVolume exec --no-startup-id amixer -c 1 sset 'Master' 5%- && paplay /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga
-bindsym --release Shift+XF86AudioRaiseVolume exec --no-startup-id  amixer -c 1 sset 'Master' 15%+ && paplay /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga
-bindsym --release Shift+XF86AudioLowerVolume exec --no-startup-id  amixer -c 1 sset 'Master' 15%- && paplay /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga
+bindsym --release XF86AudioRaiseVolume exec --no-startup-id amixer sset 'Master' 5%+ && paplay /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga #&& notify-send "$(amixer -c 1 sget 'Master' | cut -d ']' -sf 2 | cut -c 2-)"
+bindsym --release XF86AudioLowerVolume exec --no-startup-id amixer sset 'Master' 5%- && paplay /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga
+bindsym --release Shift+XF86AudioRaiseVolume exec --no-startup-id  amixer sset 'Master' 15%+ && paplay /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga
+bindsym --release Shift+XF86AudioLowerVolume exec --no-startup-id  amixer sset 'Master' 15%- && paplay /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga
 bindsym --release XF86AudioMute exec --no-startup-id amixer sset 'Master' toggle
-bindsym --release $mod+F6 exec --no-startup-id amixer -c 1 sset 'Master' 5%+ && paplay /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga
-bindsym --release $mod+F5 exec --no-startup-id amixer -c 1 sset 'Master' 5%- && paplay /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga
+bindsym --release $mod+F6 exec --no-startup-id amixer sset 'Master' 5%+ && paplay /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga
+bindsym --release $mod+F5 exec --no-startup-id amixer sset 'Master' 5%- && paplay /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga
 bindsym --release $mod+F3 exec --no-startup-id amixer sset 'Master' toggle
 
-# sreen brightness controls
-bindsym XF86MonBrightnessUp exec xbacklight -inc 2
-bindsym Shift+XF86MonBrightnessUp exec xbacklight -inc 15
-bindsym XF86MonBrightnessDown exec xbacklight -dec 2
-bindsym Shift+XF86MonBrightnessDown exec xbacklight -dec 15
+# screen brightness controls
+bindsym XF86MonBrightnessUp exec xbacklight -inc 10 
+bindsym Shift+XF86MonBrightnessUp exec xbacklight -inc 100
+bindsym XF86MonBrightnessDown exec xbacklight -dec 10
+bindsym Shift+XF86MonBrightnessDown exec xbacklight -set 1
 
 # redshift
 bindsym --release $mod+ctrl+r exec ~/.local/bin/red.sh
@@ -322,4 +346,7 @@ bindsym $mod+$mod2+Shift+x exec ~/.local/bin/lock.sh
 
 # screenshot
 bindsym --release $mod+p exec --no-startup-id scrot ~/Pictures/`date +%Y%m%d_%H%M%S`.png && exec notify-send 'SCROT' 'Screenshot taken (~/Pictures)'
+
+
+
 

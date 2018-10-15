@@ -1,6 +1,6 @@
 ! General settings
 URxvt.scrollBar: none
-URxvt.internalBorder: 30
+URxvt.internalBorder: 20
 URxvt.tintColor: white
 URxvt.inheritPixmap: false
 
@@ -22,7 +22,15 @@ URxvt*loginShell: true
 
 ! Font settings
 !URxvt.font: xft:Oxygen Mono:size=11
-URxvt.font: xft:DejaVu Sans Mono:size=10
+!URxvt.font: xft:DejaVu Sans Mono:size=10
+URxvt.font: envypn-13
+!URxvt.font: -misc-cmr10-medium-r-normal--0-0-0-0-p-0-iso10646-1
 !URxvt.font: xft:unifont:size=12	
 !URxvt.font: xft:envypn:size=15
 !URxvt.letterSpace: -1
+
+URxvt*scrollTtyOutput:		False
+URxvt*scrollWithBuffer:		False
+URxvt*scrollTtyKeypress:	True
+
+URxvt*perl-ext-common: default,confirm-paste
