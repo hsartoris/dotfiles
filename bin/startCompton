@@ -1,0 +1,3 @@
+#!/bin/bash
+compton -c -C -r 6 -m .75 -f -D 6 -i .75 --glx-swap-method 1 -l -5 -t -5 -o .5 -b
+

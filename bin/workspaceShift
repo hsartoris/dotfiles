@@ -1,0 +1,19 @@
+#!/bin/bash
+wspace=$(i3-msg -t get_workspaces | jq -r '.[] | select(.focused==true).name')
+
+if [ -z "$1" ]; then
+	echo "Bad arg";
+	exit
+fi
+
+target=$(($wspace+$1))
+
+if [ $target -lt 1 ] || [ $target -gt 9 ] ; then
+	echo "Out of range";
+	exit
+fi
+
+echo $target
+
+i3-msg "rename workspace $wspace to temp; rename workspace $target to $wspace; rename workspace temp to $target"
+
