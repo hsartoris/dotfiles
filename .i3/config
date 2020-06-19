@@ -18,8 +18,10 @@ set $base0D #576ddb
 set $base0E #955ae7
 set $base0F #bf40bf
 
+
 exec_always `setxkbmap -layout us,ru`
 exec_always `setxkbmap -option 'grp:alt_shift_toggle'`
+exec_always `setxkbmap -option 'caps:escape'`
 
 exec_always --no-startup-id xrdb ~/.Xresources
 
